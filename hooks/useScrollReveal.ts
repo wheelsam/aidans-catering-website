@@ -15,7 +15,7 @@ export function useScrollReveal(options: UseScrollRevealOptions = {}) {
     triggerOnce = true,
   } = options;
 
-  const elementRef = useRef<HTMLDivElement>(null);
+  const elementRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
