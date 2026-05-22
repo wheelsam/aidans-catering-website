@@ -73,7 +73,7 @@ export default function Home() {
           <p className="text-center text-lg text-charcoal/70 mb-16 max-w-2xl mx-auto">
             From intimate gatherings to grand celebrations, each experience is thoughtfully crafted with premium ingredients and artistic presentation.
           </p>
-          <div ref={servicesReveal.elementRef} className="grid md:grid-cols-2 gap-12">
+          <div ref={servicesReveal.elementRef as React.RefObject<HTMLDivElement>} className="grid md:grid-cols-2 gap-12">
             <div className={`space-y-4 fade-up ${servicesReveal.isVisible ? 'revealed' : ''}`}>
               <Carousel
                 images={[
@@ -159,7 +159,7 @@ export default function Home() {
       <section id="about" className="py-24 px-6 bg-cream">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div ref={aboutTextReveal.elementRef} className={`space-y-6 fade-left ${aboutTextReveal.isVisible ? 'revealed' : ''}`}>
+            <div ref={aboutTextReveal.elementRef as React.RefObject<HTMLDivElement>} className={`space-y-6 fade-left ${aboutTextReveal.isVisible ? 'revealed' : ''}`}>
               <h2 className="font-serif text-5xl md:text-6xl text-charcoal">Meet Aidan</h2>
               <p className="text-lg text-charcoal/80 leading-relaxed">
                 Hello! I'm Aidan Collins, a Seattle-based chef passionate about creating beautiful, delicious experiences for your most important moments.
@@ -189,7 +189,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div ref={aboutImageReveal.elementRef} className={`relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl fade-right ${aboutImageReveal.isVisible ? 'revealed' : ''}`}>
+            <div ref={aboutImageReveal.elementRef as React.RefObject<HTMLDivElement>} className={`relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl fade-right ${aboutImageReveal.isVisible ? 'revealed' : ''}`}>
               <Image
                 src="/images/IMG_3519.jpeg"
                 alt="Fine dining plated dish by Chef Aidan Collins"
@@ -210,7 +210,7 @@ export default function Home() {
           <p className="text-center text-lg text-charcoal/70 mb-16 max-w-2xl mx-auto">
             A showcase of recent work, from elegant wedding boards to stunning grazing tables
           </p>
-          <div ref={portfolioReveal.elementRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div ref={portfolioReveal.elementRef as React.RefObject<HTMLDivElement>} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
               "IMG_1326.jpeg",
               "IMG_1328.jpeg",
@@ -268,7 +268,7 @@ export default function Home() {
             I'd love to discuss your vision and show you what I can create for your special day.
             Reach out to schedule a consultation and let's make your event truly memorable.
           </p>
-          <div ref={contactReveal.elementRef} className="grid md:grid-cols-2 gap-8 mb-12">
+          <div ref={contactReveal.elementRef as React.RefObject<HTMLDivElement>} className="grid md:grid-cols-2 gap-8 mb-12">
             <div className={`bg-white p-10 rounded-2xl shadow-lg hover:shadow-xl transition-shadow contact-card fade-up ${contactReveal.isVisible ? 'revealed' : ''}`}>
               <div className="w-16 h-16 bg-darkgreen/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-darkgreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
