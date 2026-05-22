@@ -1,0 +1,1995 @@
+Delivered-To: wheelocksam@gmail.com
+Received: by 2002:a05:7108:3f1a:b0:559:1420:a061 with SMTP id hu26csp762048gdb;
+        Thu, 21 May 2026 17:11:42 -0700 (PDT)
+X-Received: by 2002:a05:6102:3046:b0:631:487a:23ab with SMTP id ada2fe7eead31-67c7151ace8mr736383137.5.1779408702350;
+        Thu, 21 May 2026 17:11:42 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1779408702; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=T8fIPRZYXrr3XIQU1l2EehnHt4lJX8e/eq0CMrI726YkZJkuw2yWytMiV3yxYFxLdP
+         ZgxBfMlsHDYXy0RIYnJINCe9Tj+ko/fCwkkhx+RgscUaB14Tre87QCIshZvJIgVBimPM
+         OynebWluFGubpL8rI+zSghe0A4yc81qM1FSKyUpVXXiiDychtCsVKqKtOG8ybx17EcHR
+         kIKNIzoWpd5MYPY4Sf0eUebqeBllQmEYav0TfN9DcaQbQlMSfXLImUjT5ALLUdgQoWJe
+         ArUfERfns3Bmef5JBxK+ToyhgFcLfhsWwGS02hVDhm/i3WSveZwyTxyr7Ad+RghxGz7p
+         nDAg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=8AamKyDWToChUr8EmQnf8yWM1Z4/DvIesR/9oCEItAU=;
+        fh=9/r5sakmSQkIUkIKWI0mP+im4QYj37lSIeINZh2UkTY=;
+        b=OeTHI1/reP5rR268Ab7sNhTr3iZV7BccTGfuIlEqMs7NnIQBs9A1HrjV/IUwONkhYW
+         yxiMSHX/WsnSUqPCt6FAyr08QGyrxu2ORpl2A5Mifd2znPy+JU9voNPed3lkEhe4fgky
+         1fYOUVfyqtiF3PAq/0+v8yCi8Zi01CE8Jj7b4zEA+nIt/2YrbLlbg0ygeuIhq8HJ2RlK
+         T2udRySu1Ew6Lpl53WSlgL/UKs23nAf3fEfNB3/epymhuZmVxTZURF+NU00bCaPo98vi
+         tiVi2weuygHK6h6w9oDeufI9e5hvojqN2UG025NdrV4k4DzobjCvLHOJmD+0rLsLpQ32
+         ciSA==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=bnnW+GIz;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of aidancollins17@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=aidancollins17@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <aidancollins17@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a1e0cc1a2514c-96163273f5asor420024241.0.2026.05.21.17.11.42
+        for <wheelocksam@gmail.com>
+        (Google Transport Security);
+        Thu, 21 May 2026 17:11:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of aidancollins17@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=bnnW+GIz;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of aidancollins17@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=aidancollins17@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1779408702; cv=none;
+        d=google.com; s=arc-20240605;
+        b=IQ2L4a/mZb0zqzQ8leYHKO2QEtJ6XC6LSxt19OuTtET9b5LQ3T8KAdLUjuckaVu+Zm
+         IwL/+SsQMxR/HByjGPEARKmc+1Q1qyV0e+PyKTAYXt/sg786niw7LhlPfSBfxOmYnU4a
+         7XbBbC/4lGEzzVDBinUvhxxxmEI5VmRd6pC8iK0qV3S1ju3ttWIwpgd8pRLXQGQ/45Yr
+         90/0g3L7LzsvR3cdm5zPA73XBiESlArbAzvbZgVFSV0nwgch4IimOoIzywzQi7NorrnL
+         61RI8IYMP6oD9KzlaC4KonWDkv4TXOD5gj9cbEV9KMwk5CYxmlNNL+OHjmmU3YVL2s1i
+         SPeQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=8AamKyDWToChUr8EmQnf8yWM1Z4/DvIesR/9oCEItAU=;
+        fh=9/r5sakmSQkIUkIKWI0mP+im4QYj37lSIeINZh2UkTY=;
+        b=iFyssI09rDhmdfzO6FyyNniqH/Elu+ZdDAAsUWHEN2nFqZQhPcxm+UO9qyP/L4gBq6
+         fsSs5VlcfWlWiy6y9AJ0Mq/9zIAJBTYrPDe7bI5ylaCphHd8To21AuV398LK7YV4zEA6
+         x3LuYVK3X3jwT5N84C+sW2JiTgb+z3TDyKUs602bVDlLVknjM5F/M+5Oq1QcRrtIw7bl
+         Fnm7aoYMUFylyBo/VcXm6ircte1EXjxH5VK6OT4NE1Z0f3UOOFrVKiQIQndHvqTxzPes
+         6YHWTfTRPgw8tVhYg7rsBwgBAhYvugRKz9VE4Lwuoqa7Q5kY/KLsFgeO1nMjDhrho8FA
+         b85Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1779408702; x=1780013502; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=8AamKyDWToChUr8EmQnf8yWM1Z4/DvIesR/9oCEItAU=;
+        b=bnnW+GIzAJw9xXH157SPtKn5lirU+mlggZwCkGWFV51mUEeqeDNKuQGjAMG6kJE1as
+         bswgwLpqLILv4gS9xHkGzbicOhARv79fzpxFi+TLPdU2kvKKcy+bHTaaqqpYlG3CLUNX
+         dkj9qhtn3XxFmudz00Dnq5wKr233uY33RjEn1U5kLTVWDAxVpVBfhCBhqd4l9jX/l8Zt
+         8nyZpQ6Gz5PgzEm6tpGZbWYfyYM6LyH+K6x279KJp2LAhtU1JsM7DX5+B0UGrv4VWCf8
+         eStD1eD1AnwarOHk7Ctp+lEBKN8HOukR7cEWxI6PXNL/fOKZad+UdXxMolb2FoE8B5NN
+         x0hA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1779408702; x=1780013502;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=8AamKyDWToChUr8EmQnf8yWM1Z4/DvIesR/9oCEItAU=;
+        b=mxusyzGJ/pbSzb3uTr3tv7UwhQcCjs6vnlZy4rRvloNf2I6hzKn2OLXM2cwR+YuRDo
+         56AITrLzaq77cIePV+XxYv9SrNIfA6UrtTF3K5jdon0x+9qmtUMetwgD8VG1DYLXIWvH
+         17/6rCVDlp86n8uxpfc635853hw9oX4jGFRD68m5BAcPxxe96FcU01FTM55u9VRS7dOa
+         gbkj06EAPigLYflu7B+0z99uprApzKG6nqCf6qag32A5FISin/1hlsU5q8Ix3nJJI9EW
+         /p3IfXLMDnXq5T7F/folwLMUMP9dCh3cD6w/AO7MIZc4pRgys1CcJrdZ8AAsrI/tIUL3
+         Fx2Q==
+X-Gm-Message-State: AOJu0Yy9ko0KsGSQYaBmRE9CM/m59L+rUqYqKc5QXVWKQkesU0gib8E9
+	qwGWy6dg0lVI7rGRBJu1E3xedEUEy8Zf7nnagWJDvVckuku4MRGPhEVYKWrlLYhOThVV3b/ic2A
+	zpJgxq15Zqc9WzR5ChrE1sx4ps9MudwSPTQ==
+X-Gm-Gg: Acq92OEOwefsvDiUOYkDj+O6GklP1BVx01SdvbpaX0GRyKem8sy/0z4c/JmTYQHGFqi
+	SHc+YvWItoCkSqS2kqpjsDUWfGLmyGjeLuf8BMMCXkeBdAItdhFLX91K+AHqI01rrDQC5UcyNwe
+	5NYLIkUfHsnFC7EFBqXXTOYVP969UMP4im9sCK2gggwdXLBXLSODly7EqVvEmc7yeA1M+BrTRuf
+	M7tKqUoNSRBnhuVCHNdkftw2qf2gLPH/1DaGi7zP/k8OoSh3fDubEUo6uzhcDHlT6otCKN3TDlT
+	FhFzEQ12h4uMEKLSTnp8Igg+EMMGU2XfhIPMaJiMqEZqvIrq66g=
+X-Received: by 2002:a05:6122:65a1:b0:56f:61d8:86d7 with SMTP id
+ 71dfb90a1353d-586607b73aemr897186e0c.7.1779408701813; Thu, 21 May 2026
+ 17:11:41 -0700 (PDT)
+MIME-Version: 1.0
+From: Aidan Collins <aidancollins17@gmail.com>
+Date: Thu, 21 May 2026 18:11:28 -0600
+X-Gm-Features: AVHnY4KgFLEnQSp_477l9JvmK0rhFF4RUA56SYLoMKhg4dzw_uyhRQC8MlJSvRg
+Message-ID: <CALJZg-HrfUCDxcqFycx2RK_1UqcUuZ63n_90Fy-05OEjYkWRLw@mail.gmail.com>
+Subject: IMG_1398
+To: Sam Wheelock <wheelocksam@gmail.com>, Aidan Collins <aidancollins17@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000094f68406525cdf89"
+
+--00000000000094f68406525cdf89
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+[image: Image]
+<https://drive.google.com/file/d/1nGAu_nt2HdUhg1kL_yQtF3XHXO2n2WQ6>
+IMG_3807.jpeg
+<https://drive.google.com/file/d/1nGAu_nt2HdUhg1kL_yQtF3XHXO2n2WQ6>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1OBuSoXI3rBLF-TN5YNs8z3ra9mYiLfiv>
+IMG_0621.JPG
+<https://drive.google.com/file/d/1OBuSoXI3rBLF-TN5YNs8z3ra9mYiLfiv>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1zLwXUue1dPD2oKMzhiVqGMwWBItVksK5>
+IMG_1214.jpeg
+<https://drive.google.com/file/d/1zLwXUue1dPD2oKMzhiVqGMwWBItVksK5>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1dUjkf6OXIHp0Zsmea2Rba73BAsEtgKN6>
+IMG_1275.jpeg
+<https://drive.google.com/file/d/1dUjkf6OXIHp0Zsmea2Rba73BAsEtgKN6>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1NylPglV26pBGd1JD6hfGCn6aUdV0hTbb>
+IMG_1276.jpeg
+<https://drive.google.com/file/d/1NylPglV26pBGd1JD6hfGCn6aUdV0hTbb>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1GG_cc_ijqJ63gFWo9AYOI1NWkaytF71u>
+IMG_1326.jpeg
+<https://drive.google.com/file/d/1GG_cc_ijqJ63gFWo9AYOI1NWkaytF71u>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1fArK7uYelOQ2U7UNhZ1w8cLCpZr_rA9Q>
+IMG_1327.jpeg
+<https://drive.google.com/file/d/1fArK7uYelOQ2U7UNhZ1w8cLCpZr_rA9Q>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1kH7n-xYD4rhJXGWvfc3glFaxXBxoQeTr>
+IMG_1328.jpeg
+<https://drive.google.com/file/d/1kH7n-xYD4rhJXGWvfc3glFaxXBxoQeTr>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1R6bWDuv2EmqbL1c0-80WejZSFFU1Yg_i>
+IMG_1396.jpeg
+<https://drive.google.com/file/d/1R6bWDuv2EmqbL1c0-80WejZSFFU1Yg_i>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1jTBWwamNfSCnS9GxpRtzne6BhE4KFsH6>
+IMG_1690.jpeg
+<https://drive.google.com/file/d/1jTBWwamNfSCnS9GxpRtzne6BhE4KFsH6>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1jeEQVgANFVwNSRoVMtJwExGmApy_wNY3>
+IMG_1772.jpeg
+<https://drive.google.com/file/d/1jeEQVgANFVwNSRoVMtJwExGmApy_wNY3>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1bhX0wXYYRVFJBZTglcc2e7swdrQa3aAx>
+IMG_1773.jpeg
+<https://drive.google.com/file/d/1bhX0wXYYRVFJBZTglcc2e7swdrQa3aAx>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1GUkOFXi1BtgEbQZbqmQBolP0lUEG4cLO>
+IMG_2001.jpeg
+<https://drive.google.com/file/d/1GUkOFXi1BtgEbQZbqmQBolP0lUEG4cLO>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1EvUdwE75R1Jr6nqjsSC7Ty_XzsVJuqJJ>
+IMG_2026.jpeg
+<https://drive.google.com/file/d/1EvUdwE75R1Jr6nqjsSC7Ty_XzsVJuqJJ>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1070pP-UoO6lzsSStjMcKR3c10nyBVhff>
+IMG_2476.jpeg
+<https://drive.google.com/file/d/1070pP-UoO6lzsSStjMcKR3c10nyBVhff>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/18tCkqb7frcG8gAYb2QCn8IWriX7vU-cG>
+IMG_2650.jpeg
+<https://drive.google.com/file/d/18tCkqb7frcG8gAYb2QCn8IWriX7vU-cG>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1ATgDW95ic_SCSIjcViKFEPHjSrBr-Biq>
+IMG_3519.jpeg
+<https://drive.google.com/file/d/1ATgDW95ic_SCSIjcViKFEPHjSrBr-Biq>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1DgzqRT23YQzqR4w2wZ74em2gjtTsooUJ>
+IMG_3586.jpeg
+<https://drive.google.com/file/d/1DgzqRT23YQzqR4w2wZ74em2gjtTsooUJ>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1OnYUoZdAeFXcGFKbManDWCR-c_6D9u5r>
+IMG_3589.jpeg
+<https://drive.google.com/file/d/1OnYUoZdAeFXcGFKbManDWCR-c_6D9u5r>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1wJGLn--2wNIMNoGpPqUa7vLnfZssFeqe>
+IMG_3599.jpeg
+<https://drive.google.com/file/d/1wJGLn--2wNIMNoGpPqUa7vLnfZssFeqe>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1C8bsCxagcfD3SVTV3UxHVzynJQh9UgVx>
+IMG_3671.jpeg
+<https://drive.google.com/file/d/1C8bsCxagcfD3SVTV3UxHVzynJQh9UgVx>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1dOKNxCFexLvfvzekABPQtTidchQaEYli>
+IMG_3681.jpeg
+<https://drive.google.com/file/d/1dOKNxCFexLvfvzekABPQtTidchQaEYli>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1NTfgG9Aeu1lHkY-x4Rh4IbFX_HxZahNl>
+IMG_3684.jpeg
+<https://drive.google.com/file/d/1NTfgG9Aeu1lHkY-x4Rh4IbFX_HxZahNl>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1AefVzCfSwYqx8yM003SrisnDSBVN6GEf>
+IMG_3781.jpeg
+<https://drive.google.com/file/d/1AefVzCfSwYqx8yM003SrisnDSBVN6GEf>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1g_hwVt-0xQrrk2XvTsL8CxX75yOVvHm7>
+IMG_3782.jpeg
+<https://drive.google.com/file/d/1g_hwVt-0xQrrk2XvTsL8CxX75yOVvHm7>
+Added
+
+
+[image: Image]
+<https://drive.google.com/file/d/1akLLTExbeg7KQ3ok3ouNliMpzXdBno3V>
+2B9B6AAC-9E4D-4E5A-8148-A170F85EC7BB.JPG
+<https://drive.google.com/file/d/1akLLTExbeg7KQ3ok3ouNliMpzXdBno3V>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1QW43ClVDP2jCuP1ghIera9pk75kghAXT>
+79861477-068B-4DFE-A627-CE3C57EE6F08.JPG
+<https://drive.google.com/file/d/1QW43ClVDP2jCuP1ghIera9pk75kghAXT>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/17YXfwyiYik01FitOimfc4PQ30-0gj0du>
+IMG_4424.jpeg
+<https://drive.google.com/file/d/17YXfwyiYik01FitOimfc4PQ30-0gj0du>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1lFo8BFwjbg49oko5SUFuHToAwhTeiFq->
+imagejpeg_0.jpeg
+<https://drive.google.com/file/d/1lFo8BFwjbg49oko5SUFuHToAwhTeiFq->
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1KZ9s1PrpXz0WtouGA8BtoYgTsOr6w6oR>
+imagejpeg_0.jpeg
+<https://drive.google.com/file/d/1KZ9s1PrpXz0WtouGA8BtoYgTsOr6w6oR>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/11dq91nQW5KAfCCjIRKP5VW9bMzLRVSfW>
+IMG_4704.jpeg
+<https://drive.google.com/file/d/11dq91nQW5KAfCCjIRKP5VW9bMzLRVSfW>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1tmiGhHKjToPInpvgXVmwAA_CptlWYCQn>
+IMG_4760.jpeg
+<https://drive.google.com/file/d/1tmiGhHKjToPInpvgXVmwAA_CptlWYCQn>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1xBJbQnt9iakE_YuhshMr7WeoFKMJOpfd>
+IMG_4761.jpeg
+<https://drive.google.com/file/d/1xBJbQnt9iakE_YuhshMr7WeoFKMJOpfd>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1MILEyTi6ZopPKj1O_EYyjn9l9qObmqP9>
+IMG_4805.PNG
+<https://drive.google.com/file/d/1MILEyTi6ZopPKj1O_EYyjn9l9qObmqP9>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1vLbjwXaZYLX4v8j9qWumQXWGF_nu57U7>
+IMG_4827.jpeg
+<https://drive.google.com/file/d/1vLbjwXaZYLX4v8j9qWumQXWGF_nu57U7>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/12MmFuja1x6Hi2tZyofbFgrPoacq6LlX->
+IMG_3552.jpeg
+<https://drive.google.com/file/d/12MmFuja1x6Hi2tZyofbFgrPoacq6LlX->
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1EEwW6FJICy9hHWXWCQ_qffUmAd3_flzp>
+IMG_3553.jpeg
+<https://drive.google.com/file/d/1EEwW6FJICy9hHWXWCQ_qffUmAd3_flzp>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1zWaVkaJCSGO4Ul56_9A5KVw5wVhOoXnA>
+71306658765__7FF5097E-94BA-4E27-B9D0-A54F10B016EA.jpeg
+<https://drive.google.com/file/d/1zWaVkaJCSGO4Ul56_9A5KVw5wVhOoXnA>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/10BjxK7vqGlYFjz6FdHTtP5Jdbpd5rdjm>
+IMG_1167.jpeg
+<https://drive.google.com/file/d/10BjxK7vqGlYFjz6FdHTtP5Jdbpd5rdjm>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1zmYwDUvSZ9O0rYx2-ZorsxBs0GGMmaMn>
+IMG_1168.jpeg
+<https://drive.google.com/file/d/1zmYwDUvSZ9O0rYx2-ZorsxBs0GGMmaMn>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1gwnBFV2ulTJa-PsfBssVc0tmhTWNCfV6>
+IMG_5232.jpeg
+<https://drive.google.com/file/d/1gwnBFV2ulTJa-PsfBssVc0tmhTWNCfV6>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/163wB9YZktyskPXpkUECvz36WhCcL0W6o>
+IMG_5560.jpeg
+<https://drive.google.com/file/d/163wB9YZktyskPXpkUECvz36WhCcL0W6o>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/1f6h6w4LrVlQSx7U1UZ302Ioramwyij_X>
+IMG_5701.jpeg
+<https://drive.google.com/file/d/1f6h6w4LrVlQSx7U1UZ302Ioramwyij_X>
+Couldn't addCouldn't add. Tap to retry.
+
+[image: Image]
+<https://drive.google.com/file/d/15a1ngoHAG23C2HhG3MtiErYTAPMn3zwy>
+IMG_5702.jpeg
+<https://drive.google.com/file/d/15a1ngoHAG23C2HhG3MtiErYTAPMn3zwy>
+Added
+
+[image: Image]
+<https://drive.google.com/file/d/14AkezDZpbWexxpsDQ4TvBSBlMeA_LQWo>
+IMG_5903.jpeg
+<https://drive.google.com/file/d/14AkezDZpbWexxpsDQ4TvBSBlMeA_LQWo>
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8632.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8633.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8634.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8638.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_5023.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8222.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8223.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8224.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8225.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8226.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8227.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8324.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_8517.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_9290.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_9354.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_9355.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_9356.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_9357.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_9358.jpeg
+Adding=E2=80=A6
+
+[image: Image]
+IMG_9359.jpeg
+Adding=E2=80=A6
+
+[image: Video File]
+IMG_0573.mov
+Adding=E2=80=A6
+
+[image: Video File]
+IMG_1398.MOV
+Adding=E2=80=A6
+
+[image: Video File]
+cm-chat-media-video-1:be8f13f5-c2aa-529b-9d87-3c3082efdaf1:3106:0:0.MOV
+Adding=E2=80=A6
+
+--00000000000094f68406525cdf89
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div dir=3D"ltr"><div><br></div><div id=3D"m_-1979689=
+5592357370631849B4A9-6773-4DF2-B9A0-64AEB4067F56" role=3D"group" class=3D"g=
+mail_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-he=
+ight:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;fo=
+nt-weight:500;font-size:0.875em;background-color:rgb(221,227,234);border:1p=
+x solid rgb(221,221,221)"><div style=3D"display:inline-block;vertical-align=
+:middle;margin:auto 10px;padding:16px 0px"><a href=3D"https://drive.google.=
+com/file/d/1nGAu_nt2HdUhg1kL_yQtF3XHXO2n2WQ6" target=3D"_blank"><img alt=3D=
+"Image" src=3D"https://drive-thirdparty.googleusercontent.com/32/type/image=
+/jpeg" style=3D"display:block;height:18px;width:18px;padding:3px"></a></div=
+><div style=3D"display:inline-block;vertical-align:middle"><div title=3D"IM=
+G_3807.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:non=
+e;color:inherit" href=3D"https://drive.google.com/file/d/1nGAu_nt2HdUhg1kL_=
+yQtF3XHXO2n2WQ6" target=3D"_blank"><span style=3D"display:inline-block;widt=
+h:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-=
+align:middle;line-height:56px;text-align:left;text-decoration:none">IMG_380=
+7.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_status_text" st=
+yle=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;whit=
+e-space:nowrap;vertical-align:top;text-align:left">Added</span><span class=
+=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;overflow=
+:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-a=
+lign:left"></span></div></div><div aria-label=3D"Remove attachment" role=3D=
+"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:none"><d=
+iv class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><d=
+iv dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592357370630C0514D6-8C2=
+3-4DAB-BA18-D3293E44FC3F" role=3D"group" class=3D"gmail_inbodymedia gmail_c=
+hip gmail_drive_chip" style=3D"display:block;min-height:56px;max-height:500=
+px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:=
+0.875em;background-color:rgb(221,227,234);border:1px solid rgb(221,221,221)=
+"><div style=3D"display:inline-block;vertical-align:middle;margin:auto 10px=
+;padding:16px 0px"><a href=3D"https://drive.google.com/file/d/1OBuSoXI3rBLF=
+-TN5YNs8z3ra9mYiLfiv" target=3D"_blank"><img alt=3D"Image" src=3D"https://d=
+rive-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"display:=
+block;height:18px;width:18px;padding:3px"></a></div><div style=3D"display:i=
+nline-block;vertical-align:middle"><div title=3D"IMG_0621.JPG" style=3D"col=
+or:rgb(11,87,208)"><a style=3D"text-decoration:none;color:inherit" href=3D"=
+https://drive.google.com/file/d/1OBuSoXI3rBLF-TN5YNs8z3ra9mYiLfiv" target=
+=3D"_blank"><span style=3D"display:inline-block;width:211px;overflow:hidden=
+;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-heigh=
+t:56px;text-align:left;text-decoration:none">IMG_0621.JPG</span></a></div><=
+div><span class=3D"gmail_drive_chip_status_text" style=3D"display:none;widt=
+h:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-=
+align:top;text-align:left">Added</span><span class=3D"gmail_drive_chip_retr=
+y_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:ell=
+ipsis;white-space:nowrap;vertical-align:top;text-align:left"></span></div><=
+/div><div aria-label=3D"Remove attachment" role=3D"button" class=3D"gmail_d=
+rive_chip_delete_button" style=3D"display:none"><div class=3D"gmail_drive_c=
+hip_delete_button_icon"></div></div></div></div><div dir=3D"ltr"><div><br><=
+/div><div id=3D"m_-19796895592357370631BCCA301-DD61-4935-A700-5AA0EE1A771E"=
+ role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" sty=
+le=3D"display:block;min-height:56px;max-height:500px;margin:8px 0px;width:3=
+03px;border-radius:16px;font-weight:500;font-size:0.875em;background-color:=
+rgb(221,227,234);border:1px solid rgb(221,221,221)"><div style=3D"display:i=
+nline-block;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a hre=
+f=3D"https://drive.google.com/file/d/1zLwXUue1dPD2oKMzhiVqGMwWBItVksK5" tar=
+get=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleuse=
+rcontent.com/32/type/image/jpeg" style=3D"display:block;height:18px;width:1=
+8px;padding:3px"></a></div><div style=3D"display:inline-block;vertical-alig=
+n:middle"><div title=3D"IMG_1214.jpeg" style=3D"color:rgb(11,87,208)"><a st=
+yle=3D"text-decoration:none;color:inherit" href=3D"https://drive.google.com=
+/file/d/1zLwXUue1dPD2oKMzhiVqGMwWBItVksK5" target=3D"_blank"><span style=3D=
+"display:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;wh=
+ite-space:nowrap;vertical-align:middle;line-height:56px;text-align:left;tex=
+t-decoration:none">IMG_1214.jpeg</span></a></div><div><span class=3D"gmail_=
+drive_chip_status_text" style=3D"display:none;width:211px;overflow:hidden;t=
+ext-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left=
+">Added</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:=
+none;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;=
+vertical-align:top;text-align:left"></span></div></div><div aria-label=3D"R=
+emove attachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" =
+style=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"><=
+/div></div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-197968=
+9559235737063890E4F01-3D77-4846-9BF0-FFD90B9B1C55" role=3D"group" class=3D"=
+gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-h=
+eight:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;f=
+ont-weight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div st=
+yle=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:=
+16px 0px"><a href=3D"https://drive.google.com/file/d/1dUjkf6OXIHp0Zsmea2Rba=
+73BAsEtgKN6" target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thir=
+dparty.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;hei=
+ght:18px;width:18px;padding:3px"></a></div><div style=3D"display:inline-blo=
+ck;vertical-align:middle"><div title=3D"IMG_1275.jpeg" style=3D"color:rgb(1=
+1,87,208)"><a style=3D"text-decoration:none;color:inherit" href=3D"https://=
+drive.google.com/file/d/1dUjkf6OXIHp0Zsmea2Rba73BAsEtgKN6" target=3D"_blank=
+"><span style=3D"display:inline-block;width:211px;overflow:hidden;text-over=
+flow:ellipsis;white-space:nowrap;vertical-align:middle;line-height:56px;tex=
+t-align:left">IMG_1275.jpeg</span></a></div><div><span class=3D"gmail_drive=
+_chip_status_text" style=3D"display:none;width:211px;overflow:hidden;text-o=
+verflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left">Add=
+ed</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;=
+width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;verti=
+cal-align:top;text-align:left"></span></div></div><div aria-label=3D"Remove=
+ attachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=
+=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div>=
+</div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592=
+3573706382CAEE60-4C94-4C6F-AB10-E32750BD4065" role=3D"group" class=3D"gmail=
+_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-height=
+:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-w=
+eight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=
+=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:16p=
+x 0px"><a href=3D"https://drive.google.com/file/d/1NylPglV26pBGd1JD6hfGCn6a=
+UdV0hTbb" target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdpa=
+rty.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;height=
+:18px;width:18px;padding:3px"></a></div><div style=3D"display:inline-block;=
+vertical-align:middle"><div title=3D"IMG_1276.jpeg" style=3D"color:rgb(11,8=
+7,208)"><a style=3D"text-decoration:none;color:inherit" href=3D"https://dri=
+ve.google.com/file/d/1NylPglV26pBGd1JD6hfGCn6aUdV0hTbb" target=3D"_blank"><=
+span style=3D"display:inline-block;width:211px;overflow:hidden;text-overflo=
+w:ellipsis;white-space:nowrap;vertical-align:middle;line-height:56px;text-a=
+lign:left">IMG_1276.jpeg</span></a></div><div><span class=3D"gmail_drive_ch=
+ip_status_text" style=3D"display:none;width:211px;overflow:hidden;text-over=
+flow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left">Added<=
+/span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;wid=
+th:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical=
+-align:top;text-align:left"></span></div></div><div aria-label=3D"Remove at=
+tachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D=
+"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div></d=
+iv></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592357=
+370634A6CFD03-8482-4DDF-9354-BB75DAE1CD0C" role=3D"group" class=3D"gmail_in=
+bodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-height:56=
+px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-weig=
+ht:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=3D"d=
+isplay:inline-block;vertical-align:middle;margin:auto 10px;padding:16px 0px=
+"><a href=3D"https://drive.google.com/file/d/1GG_cc_ijqJ63gFWo9AYOI1NWkaytF=
+71u" target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdparty.g=
+oogleusercontent.com/32/type/image/jpeg" style=3D"display:block;height:18px=
+;width:18px;padding:3px"></a></div><div style=3D"display:inline-block;verti=
+cal-align:middle"><div title=3D"IMG_1326.jpeg" style=3D"color:rgb(11,87,208=
+)"><a style=3D"text-decoration:none;color:inherit" href=3D"https://drive.go=
+ogle.com/file/d/1GG_cc_ijqJ63gFWo9AYOI1NWkaytF71u" target=3D"_blank"><span =
+style=3D"display:inline-block;width:211px;overflow:hidden;text-overflow:ell=
+ipsis;white-space:nowrap;vertical-align:middle;line-height:56px;text-align:=
+left">IMG_1326.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_st=
+atus_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:=
+ellipsis;white-space:nowrap;vertical-align:top;text-align:left">Added</span=
+><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:21=
+1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-alig=
+n:top;text-align:left"></span></div></div><div aria-label=3D"Remove attachm=
+ent" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D"disp=
+lay:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div></div></=
+div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063=
+DFCD9D61-CF75-45F0-A367-6A412B644E01" role=3D"group" class=3D"gmail_inbodym=
+edia gmail_chip gmail_drive_chip" style=3D"display:block;min-height:56px;ma=
+x-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-weight:50=
+0;font-size:0.875em;background-color:rgb(221,227,234)"><div style=3D"displa=
+y:inline-block;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a =
+href=3D"https://drive.google.com/file/d/1fArK7uYelOQ2U7UNhZ1w8cLCpZr_rA9Q" =
+target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdparty.google=
+usercontent.com/32/type/image/jpeg" style=3D"display:block;height:18px;widt=
+h:18px;padding:3px"></a></div><div style=3D"display:inline-block;vertical-a=
+lign:middle"><div title=3D"IMG_1327.jpeg" style=3D"color:rgb(11,87,208)"><a=
+ style=3D"text-decoration:none;color:inherit" href=3D"https://drive.google.=
+com/file/d/1fArK7uYelOQ2U7UNhZ1w8cLCpZr_rA9Q" target=3D"_blank"><span style=
+=3D"display:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis=
+;white-space:nowrap;vertical-align:middle;line-height:56px;text-align:left"=
+>IMG_1327.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_status_=
+text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:ellip=
+sis;white-space:nowrap;vertical-align:top;text-align:left">Added</span><spa=
+n class=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;o=
+verflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top=
+;text-align:left"></span></div></div><div aria-label=3D"Remove attachment" =
+role=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:n=
+one"><div class=3D"gmail_drive_chip_delete_button_icon"></div></div></div><=
+/div><div dir=3D"ltr"><div><br></div><div id=3D"m_-197968955923573706306CE3=
+B78-1370-43DB-B701-CD79F8007EF0" role=3D"group" class=3D"gmail_inbodymedia =
+gmail_chip gmail_drive_chip" style=3D"display:block;min-height:56px;max-hei=
+ght:500px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;fon=
+t-size:0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inl=
+ine-block;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a href=
+=3D"https://drive.google.com/file/d/1kH7n-xYD4rhJXGWvfc3glFaxXBxoQeTr" targ=
+et=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleuser=
+content.com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18=
+px;padding:3px"></a></div><div style=3D"display:inline-block;vertical-align=
+:middle"><div title=3D"IMG_1328.jpeg" style=3D"color:rgb(11,87,208)"><a sty=
+le=3D"text-decoration:none;color:inherit" href=3D"https://drive.google.com/=
+file/d/1kH7n-xYD4rhJXGWvfc3glFaxXBxoQeTr" target=3D"_blank"><span style=3D"=
+display:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;whi=
+te-space:nowrap;vertical-align:middle;line-height:56px;text-align:left">IMG=
+_1328.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_status_text=
+" style=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;=
+white-space:nowrap;vertical-align:top;text-align:left">Added</span><span cl=
+ass=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;overf=
+low:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;tex=
+t-align:left"></span></div></div><div aria-label=3D"Remove attachment" role=
+=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:none"=
+><div class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div=
+><div dir=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063E78B3845-=
+E88C-4FE0-9F10-2A1C752A7FC2" role=3D"group" class=3D"gmail_inbodymedia gmai=
+l_chip gmail_drive_chip" style=3D"display:block;min-height:56px;max-height:=
+500px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-si=
+ze:0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inline-=
+block;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"h=
+ttps://drive.google.com/file/d/1R6bWDuv2EmqbL1c0-80WejZSFFU1Yg_i" target=3D=
+"_blank"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleuserconte=
+nt.com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;pa=
+dding:3px"></a></div><div style=3D"display:inline-block;vertical-align:midd=
+le"><div title=3D"IMG_1396.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D=
+"text-decoration:none;color:inherit" href=3D"https://drive.google.com/file/=
+d/1R6bWDuv2EmqbL1c0-80WejZSFFU1Yg_i" target=3D"_blank"><span style=3D"displ=
+ay:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-sp=
+ace:nowrap;vertical-align:middle;line-height:56px;text-align:left">IMG_1396=
+.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_status_text" sty=
+le=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white=
+-space:nowrap;vertical-align:top;text-align:left">Added</span><span class=
+=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;overflow=
+:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-a=
+lign:left"></span></div></div><div aria-label=3D"Remove attachment" role=3D=
+"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:none"><d=
+iv class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><d=
+iv dir=3D"ltr"><div><br></div><div id=3D"m_-197968955923573706360C78302-FFC=
+B-4AD1-B899-11ECAA104E91" role=3D"group" class=3D"gmail_inbodymedia gmail_c=
+hip gmail_drive_chip" style=3D"display:block;min-height:56px;max-height:500=
+px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:=
+0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inline-blo=
+ck;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"http=
+s://drive.google.com/file/d/1jTBWwamNfSCnS9GxpRtzne6BhE4KFsH6" target=3D"_b=
+lank"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.=
+com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;paddi=
+ng:3px"></a></div><div style=3D"display:inline-block;vertical-align:middle"=
+><div title=3D"IMG_1690.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"te=
+xt-decoration:none;color:inherit" href=3D"https://drive.google.com/file/d/1=
+jTBWwamNfSCnS9GxpRtzne6BhE4KFsH6" target=3D"_blank"><span style=3D"display:=
+inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-space=
+:nowrap;vertical-align:middle;line-height:56px;text-align:left">IMG_1690.jp=
+eg</span></a></div><div><span class=3D"gmail_drive_chip_status_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left">Added</span><span class=3D"=
+gmail_drive_chip_retry_text" style=3D"display:none;width:211px;overflow:hid=
+den;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align=
+:left"></span></div></div><div aria-label=3D"Remove attachment" role=3D"but=
+ton" class=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div c=
+lass=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><div d=
+ir=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063E65DB5B1-541E-45=
+E0-9A16-54A0A60729CE" role=3D"group" class=3D"gmail_inbodymedia gmail_chip =
+gmail_drive_chip" style=3D"display:block;min-height:56px;max-height:500px;m=
+argin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:0.87=
+5em;background-color:rgb(221,227,234)"><div style=3D"display:inline-block;v=
+ertical-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"https://=
+drive.google.com/file/d/1jeEQVgANFVwNSRoVMtJwExGmApy_wNY3" target=3D"_blank=
+"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/=
+32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;padding:3=
+px"></a></div><div style=3D"display:inline-block;vertical-align:middle"><di=
+v title=3D"IMG_1772.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"text-d=
+ecoration:none;color:inherit" href=3D"https://drive.google.com/file/d/1jeEQ=
+VgANFVwNSRoVMtJwExGmApy_wNY3" target=3D"_blank"><span style=3D"display:inli=
+ne-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:now=
+rap;vertical-align:middle;line-height:56px;text-align:left">IMG_1772.jpeg</=
+span></a></div><div><span class=3D"gmail_drive_chip_status_text" style=3D"d=
+isplay:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:=
+nowrap;vertical-align:top;text-align:left">Added</span><span class=3D"gmail=
+_drive_chip_retry_text" style=3D"display:none;width:211px;overflow:hidden;t=
+ext-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left=
+"></span></div></div><div aria-label=3D"Remove attachment" role=3D"button" =
+class=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div class=
+=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><div dir=
+=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063456D3BEC-1BE9-4933=
+-9E5B-66F609D95753" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gm=
+ail_drive_chip" style=3D"display:block;min-height:56px;max-height:500px;mar=
+gin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:0.875e=
+m;background-color:rgb(221,227,234)"><div style=3D"display:inline-block;ver=
+tical-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"https://dr=
+ive.google.com/file/d/1bhX0wXYYRVFJBZTglcc2e7swdrQa3aAx" target=3D"_blank">=
+<img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/32=
+/type/image/jpeg" style=3D"display:block;height:18px;width:18px;padding:3px=
+"></a></div><div style=3D"display:inline-block;vertical-align:middle"><div =
+title=3D"IMG_1773.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"text-dec=
+oration:none;color:inherit" href=3D"https://drive.google.com/file/d/1bhX0wX=
+YYRVFJBZTglcc2e7swdrQa3aAx" target=3D"_blank"><span style=3D"display:inline=
+-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowra=
+p;vertical-align:middle;line-height:56px;text-align:left">IMG_1773.jpeg</sp=
+an></a></div><div><span class=3D"gmail_drive_chip_status_text" style=3D"dis=
+play:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:no=
+wrap;vertical-align:top;text-align:left">Added</span><span class=3D"gmail_d=
+rive_chip_retry_text" style=3D"display:none;width:211px;overflow:hidden;tex=
+t-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left">=
+</span></div></div><div aria-label=3D"Remove attachment" role=3D"button" cl=
+ass=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div class=3D=
+"gmail_drive_chip_delete_button_icon"></div></div></div></div><div dir=3D"l=
+tr"><div><br></div><div id=3D"m_-1979689559235737063D8B0CDF6-1DAA-401F-A9ED=
+-E44C1AD88E6D" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_d=
+rive_chip" style=3D"display:block;min-height:56px;max-height:500px;margin:8=
+px 0px;width:303px;border-radius:16px;font-weight:500;font-size:0.875em;bac=
+kground-color:rgb(221,227,234)"><div style=3D"display:inline-block;vertical=
+-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"https://drive.g=
+oogle.com/file/d/1GUkOFXi1BtgEbQZbqmQBolP0lUEG4cLO" target=3D"_blank"><img =
+alt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/32/type=
+/image/jpeg" style=3D"display:block;height:18px;width:18px;padding:3px"></a=
+></div><div style=3D"display:inline-block;vertical-align:middle"><div title=
+=3D"IMG_2001.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"text-decorati=
+on:none;color:inherit" href=3D"https://drive.google.com/file/d/1GUkOFXi1Btg=
+EbQZbqmQBolP0lUEG4cLO" target=3D"_blank"><span style=3D"display:inline-bloc=
+k;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;ver=
+tical-align:middle;line-height:56px;text-align:left">IMG_2001.jpeg</span></=
+a></div><div><span class=3D"gmail_drive_chip_status_text" style=3D"display:=
+none;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;=
+vertical-align:top;text-align:left">Added</span><span class=3D"gmail_drive_=
+chip_retry_text" style=3D"display:none;width:211px;overflow:hidden;text-ove=
+rflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left"></spa=
+n></div></div><div aria-label=3D"Remove attachment" role=3D"button" class=
+=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div class=3D"gm=
+ail_drive_chip_delete_button_icon"></div></div></div></div><div dir=3D"ltr"=
+><div><br></div><div id=3D"m_-1979689559235737063B1DA477E-71B2-424B-87FD-57=
+F681B607BB" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_driv=
+e_chip" style=3D"display:block;min-height:56px;max-height:500px;margin:8px =
+0px;width:303px;border-radius:16px;font-weight:500;font-size:0.875em;backgr=
+ound-color:rgb(221,227,234)"><div style=3D"display:inline-block;vertical-al=
+ign:middle;margin:auto 10px;padding:16px 0px"><a href=3D"https://drive.goog=
+le.com/file/d/1EvUdwE75R1Jr6nqjsSC7Ty_XzsVJuqJJ" target=3D"_blank"><img alt=
+=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/32/type/im=
+age/jpeg" style=3D"display:block;height:18px;width:18px;padding:3px"></a></=
+div><div style=3D"display:inline-block;vertical-align:middle"><div title=3D=
+"IMG_2026.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:=
+none;color:inherit" href=3D"https://drive.google.com/file/d/1EvUdwE75R1Jr6n=
+qjsSC7Ty_XzsVJuqJJ" target=3D"_blank"><span style=3D"display:inline-block;w=
+idth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertic=
+al-align:middle;line-height:56px;text-align:left">IMG_2026.jpeg</span></a><=
+/div><div><span class=3D"gmail_drive_chip_status_text" style=3D"display:non=
+e;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;ver=
+tical-align:top;text-align:left">Added</span><span class=3D"gmail_drive_chi=
+p_retry_text" style=3D"display:none;width:211px;overflow:hidden;text-overfl=
+ow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left"></span><=
+/div></div><div aria-label=3D"Remove attachment" role=3D"button" class=3D"g=
+mail_drive_chip_delete_button" style=3D"display:none"><div class=3D"gmail_d=
+rive_chip_delete_button_icon"></div></div></div></div><div dir=3D"ltr"><div=
+><br></div><div id=3D"m_-1979689559235737063AA58D4B4-31D3-4072-8B35-91F0147=
+3873B" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chi=
+p" style=3D"display:block;min-height:56px;max-height:500px;margin:8px 0px;w=
+idth:303px;border-radius:16px;font-weight:500;font-size:0.875em;background-=
+color:rgb(221,227,234)"><div style=3D"display:inline-block;vertical-align:m=
+iddle;margin:auto 10px;padding:16px 0px"><a href=3D"https://drive.google.co=
+m/file/d/1070pP-UoO6lzsSStjMcKR3c10nyBVhff" target=3D"_blank"><img alt=3D"I=
+mage" src=3D"https://drive-thirdparty.googleusercontent.com/32/type/image/j=
+peg" style=3D"display:block;height:18px;width:18px;padding:3px"></a></div><=
+div style=3D"display:inline-block;vertical-align:middle"><div title=3D"IMG_=
+2476.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:none;=
+color:inherit" href=3D"https://drive.google.com/file/d/1070pP-UoO6lzsSStjMc=
+KR3c10nyBVhff" target=3D"_blank"><span style=3D"display:inline-block;width:=
+211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-al=
+ign:middle;line-height:56px;text-align:left">IMG_2476.jpeg</span></a></div>=
+<div><span class=3D"gmail_drive_chip_status_text" style=3D"display:none;wid=
+th:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical=
+-align:top;text-align:left">Added</span><span class=3D"gmail_drive_chip_ret=
+ry_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:el=
+lipsis;white-space:nowrap;vertical-align:top;text-align:left"></span></div>=
+</div><div aria-label=3D"Remove attachment" role=3D"button" class=3D"gmail_=
+drive_chip_delete_button" style=3D"display:none"><div class=3D"gmail_drive_=
+chip_delete_button_icon"></div></div></div></div><div dir=3D"ltr"><div><br>=
+</div><div id=3D"m_-197968955923573706391662B76-B7B9-4E4A-B741-EF880D7E8FD4=
+" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" st=
+yle=3D"display:block;min-height:56px;max-height:500px;margin:8px 0px;width:=
+303px;border-radius:16px;font-weight:500;font-size:0.875em;background-color=
+:rgb(221,227,234)"><div style=3D"display:inline-block;vertical-align:middle=
+;margin:auto 10px;padding:16px 0px"><a href=3D"https://drive.google.com/fil=
+e/d/18tCkqb7frcG8gAYb2QCn8IWriX7vU-cG" target=3D"_blank"><img alt=3D"Image"=
+ src=3D"https://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" =
+style=3D"display:block;height:18px;width:18px;padding:3px"></a></div><div s=
+tyle=3D"display:inline-block;vertical-align:middle"><div title=3D"IMG_2650.=
+jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:none;color=
+:inherit" href=3D"https://drive.google.com/file/d/18tCkqb7frcG8gAYb2QCn8IWr=
+iX7vU-cG" target=3D"_blank"><span style=3D"display:inline-block;width:211px=
+;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:m=
+iddle;line-height:56px;text-align:left">IMG_2650.jpeg</span></a></div><div>=
+<span class=3D"gmail_drive_chip_status_text" style=3D"display:none;width:21=
+1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-alig=
+n:top;text-align:left">Added</span><span class=3D"gmail_drive_chip_retry_te=
+xt" style=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsi=
+s;white-space:nowrap;vertical-align:top;text-align:left"></span></div></div=
+><div aria-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive=
+_chip_delete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_=
+delete_button_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div=
+><div id=3D"m_-19796895592357370639245BDB3-BBE2-4EC4-A89A-D9263758D1C5" rol=
+e=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=
+=3D"display:block;min-height:56px;max-height:500px;margin:8px 0px;width:303=
+px;border-radius:16px;font-weight:500;font-size:0.875em;background-color:rg=
+b(221,227,234)"><div style=3D"display:inline-block;vertical-align:middle;ma=
+rgin:auto 10px;padding:16px 0px"><a href=3D"https://drive.google.com/file/d=
+/1ATgDW95ic_SCSIjcViKFEPHjSrBr-Biq" target=3D"_blank"><img alt=3D"Image" sr=
+c=3D"https://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" sty=
+le=3D"display:block;height:18px;width:18px;padding:3px"></a></div><div styl=
+e=3D"display:inline-block;vertical-align:middle"><div title=3D"IMG_3519.jpe=
+g" style=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:none;color:in=
+herit" href=3D"https://drive.google.com/file/d/1ATgDW95ic_SCSIjcViKFEPHjSrB=
+r-Biq" target=3D"_blank"><span style=3D"display:inline-block;width:211px;ov=
+erflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:midd=
+le;line-height:56px;text-align:left">IMG_3519.jpeg</span></a></div><div><sp=
+an class=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px=
+;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:t=
+op;text-align:left">Added</span><span class=3D"gmail_drive_chip_retry_text"=
+ style=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;w=
+hite-space:nowrap;vertical-align:top;text-align:left"></span></div></div><d=
+iv aria-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_ch=
+ip_delete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_del=
+ete_button_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><d=
+iv id=3D"m_-1979689559235737063562FCADC-D4FD-44E3-AD35-C62AF01DBDDA" role=
+=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D=
+"display:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;=
+border-radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(2=
+21,227,234)"><div style=3D"display:inline-block;vertical-align:middle;margi=
+n:auto 10px;padding:16px 0px"><a href=3D"https://drive.google.com/file/d/1D=
+gzqRT23YQzqR4w2wZ74em2gjtTsooUJ" target=3D"_blank"><img alt=3D"Image" src=
+=3D"https://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" styl=
+e=3D"display:block;height:18px;width:18px;padding:3px"></a></div><div style=
+=3D"display:inline-block;vertical-align:middle"><div title=3D"IMG_3586.jpeg=
+" style=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:none;color:inh=
+erit" href=3D"https://drive.google.com/file/d/1DgzqRT23YQzqR4w2wZ74em2gjtTs=
+ooUJ" target=3D"_blank"><span style=3D"display:inline-block;width:211px;ove=
+rflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middl=
+e;line-height:56px;text-align:left">IMG_3586.jpeg</span></a></div><div><spa=
+n class=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;=
+overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:to=
+p;text-align:left">Added</span><span class=3D"gmail_drive_chip_retry_text" =
+style=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;wh=
+ite-space:nowrap;vertical-align:top;text-align:left"></span></div></div><di=
+v aria-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chi=
+p_delete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_dele=
+te_button_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><di=
+v id=3D"m_-1979689559235737063F777D6B9-D1C0-4B70-BC08-D33886BF95F7" role=3D=
+"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"di=
+splay:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;bor=
+der-radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(221,=
+227,234)"><div style=3D"display:inline-block;vertical-align:middle;margin:a=
+uto 10px;padding:16px 0px"><a href=3D"https://drive.google.com/file/d/1OnYU=
+oZdAeFXcGFKbManDWCR-c_6D9u5r" target=3D"_blank"><img alt=3D"Image" src=3D"h=
+ttps://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"=
+display:block;height:18px;width:18px;padding:3px"></a></div><div style=3D"d=
+isplay:inline-block;vertical-align:middle"><div title=3D"IMG_3589.jpeg" sty=
+le=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:none;color:inherit"=
+ href=3D"https://drive.google.com/file/d/1OnYUoZdAeFXcGFKbManDWCR-c_6D9u5r"=
+ target=3D"_blank"><span style=3D"display:inline-block;width:211px;overflow=
+:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;lin=
+e-height:56px;text-align:left">IMG_3589.jpeg</span></a></div><div><span cla=
+ss=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;overf=
+low:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;tex=
+t-align:left">Added</span><span class=3D"gmail_drive_chip_retry_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left"></span></div></div><div ari=
+a-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chip_del=
+ete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_delete_bu=
+tton_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><div id=
+=3D"m_-197968955923573706318F6953E-097D-45E4-BDC1-37899CADC8EE" role=3D"gro=
+up" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"displa=
+y:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;border-=
+radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(221,227,=
+234)"><div style=3D"display:inline-block;vertical-align:middle;margin:auto =
+10px;padding:16px 0px"><a href=3D"https://drive.google.com/file/d/1wJGLn--2=
+wNIMNoGpPqUa7vLnfZssFeqe" target=3D"_blank"><img alt=3D"Image" src=3D"https=
+://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"disp=
+lay:block;height:18px;width:18px;padding:3px"></a></div><div style=3D"displ=
+ay:inline-block;vertical-align:middle"><div title=3D"IMG_3599.jpeg" style=
+=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:none;color:inherit" h=
+ref=3D"https://drive.google.com/file/d/1wJGLn--2wNIMNoGpPqUa7vLnfZssFeqe" t=
+arget=3D"_blank"><span style=3D"display:inline-block;width:211px;overflow:h=
+idden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-=
+height:56px;text-align:left">IMG_3599.jpeg</span></a></div><div><span class=
+=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;overflo=
+w:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-=
+align:left">Added</span><span class=3D"gmail_drive_chip_retry_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left"></span></div></div><div ari=
+a-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chip_del=
+ete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_delete_bu=
+tton_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><div id=
+=3D"m_-1979689559235737063BB2E2F68-E676-41F8-930A-01E41D592915" role=3D"gro=
+up" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"displa=
+y:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;border-=
+radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(221,227,=
+234)"><div style=3D"display:inline-block;vertical-align:middle;margin:auto =
+10px;padding:16px 0px"><a href=3D"https://drive.google.com/file/d/1C8bsCxag=
+cfD3SVTV3UxHVzynJQh9UgVx" target=3D"_blank"><img alt=3D"Image" src=3D"https=
+://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"disp=
+lay:block;height:18px;width:18px;padding:3px"></a></div><div style=3D"displ=
+ay:inline-block;vertical-align:middle"><div title=3D"IMG_3671.jpeg" style=
+=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:none;color:inherit" h=
+ref=3D"https://drive.google.com/file/d/1C8bsCxagcfD3SVTV3UxHVzynJQh9UgVx" t=
+arget=3D"_blank"><span style=3D"display:inline-block;width:211px;overflow:h=
+idden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-=
+height:56px;text-align:left">IMG_3671.jpeg</span></a></div><div><span class=
+=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;overflo=
+w:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-=
+align:left">Added</span><span class=3D"gmail_drive_chip_retry_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left"></span></div></div><div ari=
+a-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chip_del=
+ete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_delete_bu=
+tton_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><div id=
+=3D"m_-1979689559235737063C391288F-274A-40F6-96B9-6A608AE234FF" role=3D"gro=
+up" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"displa=
+y:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;border-=
+radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(221,227,=
+234)"><div style=3D"display:inline-block;vertical-align:middle;margin:auto =
+10px;padding:16px 0px"><a href=3D"https://drive.google.com/file/d/1dOKNxCFe=
+xLvfvzekABPQtTidchQaEYli" target=3D"_blank"><img alt=3D"Image" src=3D"https=
+://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"disp=
+lay:block;height:18px;width:18px;padding:3px"></a></div><div style=3D"displ=
+ay:inline-block;vertical-align:middle"><div title=3D"IMG_3681.jpeg" style=
+=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:none;color:inherit" h=
+ref=3D"https://drive.google.com/file/d/1dOKNxCFexLvfvzekABPQtTidchQaEYli" t=
+arget=3D"_blank"><span style=3D"display:inline-block;width:211px;overflow:h=
+idden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-=
+height:56px;text-align:left">IMG_3681.jpeg</span></a></div><div><span class=
+=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;overflo=
+w:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-=
+align:left">Added</span><span class=3D"gmail_drive_chip_retry_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left"></span></div></div><div ari=
+a-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chip_del=
+ete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_delete_bu=
+tton_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><div id=
+=3D"m_-1979689559235737063A8607134-A19A-40B5-B265-DEF681B1CD2B" role=3D"gro=
+up" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"displa=
+y:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;border-=
+radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(221,227,=
+234)"><div style=3D"display:inline-block;vertical-align:middle;margin:auto =
+10px;padding:16px 0px"><a href=3D"https://drive.google.com/file/d/1NTfgG9Ae=
+u1lHkY-x4Rh4IbFX_HxZahNl" target=3D"_blank"><img alt=3D"Image" src=3D"https=
+://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"disp=
+lay:block;height:18px;width:18px;padding:3px"></a></div><div style=3D"displ=
+ay:inline-block;vertical-align:middle"><div title=3D"IMG_3684.jpeg" style=
+=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:none;color:inherit" h=
+ref=3D"https://drive.google.com/file/d/1NTfgG9Aeu1lHkY-x4Rh4IbFX_HxZahNl" t=
+arget=3D"_blank"><span style=3D"display:inline-block;width:211px;overflow:h=
+idden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-=
+height:56px;text-align:left">IMG_3684.jpeg</span></a></div><div><span class=
+=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;overflo=
+w:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-=
+align:left">Added</span><span class=3D"gmail_drive_chip_retry_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left"></span></div></div><div ari=
+a-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chip_del=
+ete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_delete_bu=
+tton_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><div id=
+=3D"m_-1979689559235737063539F7DDB-0DD0-4043-895E-96451690CFE1" role=3D"gro=
+up" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"displa=
+y:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;border-=
+radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(221,227,=
+234)"><div style=3D"display:inline-block;vertical-align:middle;margin:auto =
+10px;padding:16px 0px"><a href=3D"https://drive.google.com/file/d/1AefVzCfS=
+wYqx8yM003SrisnDSBVN6GEf" target=3D"_blank"><img alt=3D"Image" src=3D"https=
+://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"disp=
+lay:block;height:18px;width:18px;padding:3px"></a></div><div style=3D"displ=
+ay:inline-block;vertical-align:middle"><div title=3D"IMG_3781.jpeg" style=
+=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:none;color:inherit" h=
+ref=3D"https://drive.google.com/file/d/1AefVzCfSwYqx8yM003SrisnDSBVN6GEf" t=
+arget=3D"_blank"><span style=3D"display:inline-block;width:211px;overflow:h=
+idden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-=
+height:56px;text-align:left">IMG_3781.jpeg</span></a></div><div><span class=
+=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;overflo=
+w:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-=
+align:left">Added</span><span class=3D"gmail_drive_chip_retry_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left"></span></div></div><div ari=
+a-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chip_del=
+ete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_delete_bu=
+tton_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><div id=
+=3D"m_-1979689559235737063D4930E0C-87C7-470B-80FD-44186711D036" role=3D"gro=
+up" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"displa=
+y:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;border-=
+radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(221,227,=
+234)"><div style=3D"display:inline-block;vertical-align:middle;margin:auto =
+10px;padding:16px 0px"><a href=3D"https://drive.google.com/file/d/1g_hwVt-0=
+xQrrk2XvTsL8CxX75yOVvHm7" target=3D"_blank"><img alt=3D"Image" src=3D"https=
+://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"disp=
+lay:block;height:18px;width:18px;padding:3px"></a></div><div style=3D"displ=
+ay:inline-block;vertical-align:middle"><div title=3D"IMG_3782.jpeg" style=
+=3D"color:rgb(11,87,208)"><a style=3D"text-decoration:none;color:inherit" h=
+ref=3D"https://drive.google.com/file/d/1g_hwVt-0xQrrk2XvTsL8CxX75yOVvHm7" t=
+arget=3D"_blank"><span style=3D"display:inline-block;width:211px;overflow:h=
+idden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-=
+height:56px;text-align:left">IMG_3782.jpeg</span></a></div><div><span class=
+=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;overflo=
+w:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-=
+align:left">Added</span><span class=3D"gmail_drive_chip_retry_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left"></span></div></div><div ari=
+a-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chip_del=
+ete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_delete_bu=
+tton_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div></div><d=
+iv dir=3D"ltr"><div><br></div><div id=3D"m_-197968955923573706317FF2A94-B4F=
+1-4C6A-A502-A2A1CB38625C" role=3D"group" class=3D"gmail_inbodymedia gmail_c=
+hip gmail_drive_chip" style=3D"display:block;min-height:56px;max-height:500=
+px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:=
+0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inline-blo=
+ck;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"http=
+s://drive.google.com/file/d/1akLLTExbeg7KQ3ok3ouNliMpzXdBno3V" target=3D"_b=
+lank"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.=
+com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;paddi=
+ng:3px"></a></div><div style=3D"display:inline-block;vertical-align:middle"=
+><div title=3D"2B9B6AAC-9E4D-4E5A-8148-A170F85EC7BB.JPG" style=3D"color:rgb=
+(11,87,208)"><a style=3D"text-decoration:none;color:inherit" href=3D"https:=
+//drive.google.com/file/d/1akLLTExbeg7KQ3ok3ouNliMpzXdBno3V" target=3D"_bla=
+nk"><span style=3D"display:inline-block;width:211px;overflow:hidden;text-ov=
+erflow:ellipsis;white-space:nowrap;vertical-align:middle;line-height:56px;t=
+ext-align:left">2B9B6AAC-9E4D-4E5A-8148-A170F85EC7BB.JPG</span></a></div><d=
+iv><span class=3D"gmail_drive_chip_status_text" style=3D"display:none;width=
+:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-a=
+lign:top;text-align:left">Added</span><span class=3D"gmail_drive_chip_retry=
+_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:elli=
+psis;white-space:nowrap;vertical-align:top;text-align:left"></span></div></=
+div><div aria-label=3D"Remove attachment" role=3D"button" class=3D"gmail_dr=
+ive_chip_delete_button" style=3D"display:none"><div class=3D"gmail_drive_ch=
+ip_delete_button_icon"></div></div></div></div><div dir=3D"ltr"><div><br></=
+div><div id=3D"m_-19796895592357370635B137E25-1104-4070-A494-9F6985F6C979" =
+role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" styl=
+e=3D"display:block;min-height:56px;max-height:500px;margin:8px 0px;width:30=
+3px;border-radius:16px;font-weight:500;font-size:0.875em;background-color:r=
+gb(221,227,234)"><div style=3D"display:inline-block;vertical-align:middle;m=
+argin:auto 10px;padding:16px 0px"><a href=3D"https://drive.google.com/file/=
+d/1QW43ClVDP2jCuP1ghIera9pk75kghAXT" target=3D"_blank"><img alt=3D"Image" s=
+rc=3D"https://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" st=
+yle=3D"display:block;height:18px;width:18px;padding:3px"></a></div><div sty=
+le=3D"display:inline-block;vertical-align:middle"><div title=3D"79861477-06=
+8B-4DFE-A627-CE3C57EE6F08.JPG" style=3D"color:rgb(11,87,208)"><a style=3D"t=
+ext-decoration:none;color:inherit" href=3D"https://drive.google.com/file/d/=
+1QW43ClVDP2jCuP1ghIera9pk75kghAXT" target=3D"_blank"><span style=3D"display=
+:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-spac=
+e:nowrap;vertical-align:middle;line-height:56px;text-align:left">79861477-0=
+68B-4DFE-A627-CE3C57EE6F08.JPG</span></a></div><div><span class=3D"gmail_dr=
+ive_chip_status_text" style=3D"display:none;width:211px;overflow:hidden;tex=
+t-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left">=
+Added</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:no=
+ne;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;ve=
+rtical-align:top;text-align:left"></span></div></div><div aria-label=3D"Rem=
+ove attachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" st=
+yle=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></d=
+iv></div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895=
+59235737063A8C275D7-4CA5-41E0-AB1B-D8D0DEB92840" role=3D"group" class=3D"gm=
+ail_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-hei=
+ght:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;fon=
+t-weight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div styl=
+e=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:16=
+px 0px"><a href=3D"https://drive.google.com/file/d/17YXfwyiYik01FitOimfc4PQ=
+30-0gj0du" target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdp=
+arty.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;heigh=
+t:18px;width:18px;padding:3px"></a></div><div style=3D"display:inline-block=
+;vertical-align:middle"><div title=3D"IMG_4424.jpeg" style=3D"color:rgb(11,=
+87,208)"><a style=3D"text-decoration:none;color:inherit" href=3D"https://dr=
+ive.google.com/file/d/17YXfwyiYik01FitOimfc4PQ30-0gj0du" target=3D"_blank">=
+<span style=3D"display:inline-block;width:211px;overflow:hidden;text-overfl=
+ow:ellipsis;white-space:nowrap;vertical-align:middle;line-height:56px;text-=
+align:left">IMG_4424.jpeg</span></a></div><div><span class=3D"gmail_drive_c=
+hip_status_text" style=3D"display:none;width:211px;overflow:hidden;text-ove=
+rflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left">Added=
+</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;wi=
+dth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertica=
+l-align:top;text-align:left"></span></div></div><div aria-label=3D"Remove a=
+ttachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=
+=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div>=
+</div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592=
+357370631C0FFE7F-74C3-4B12-A2C5-3EA32E59509E" role=3D"group" class=3D"gmail=
+_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-height=
+:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-w=
+eight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=
+=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:16p=
+x 0px"><a href=3D"https://drive.google.com/file/d/1lFo8BFwjbg49oko5SUFuHToA=
+whTeiFq-" target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdpa=
+rty.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;height=
+:18px;width:18px;padding:3px"></a></div><div style=3D"display:inline-block;=
+vertical-align:middle"><div title=3D"imagejpeg_0.jpeg" style=3D"color:rgb(1=
+1,87,208)"><a style=3D"text-decoration:none;color:inherit" href=3D"https://=
+drive.google.com/file/d/1lFo8BFwjbg49oko5SUFuHToAwhTeiFq-" target=3D"_blank=
+"><span style=3D"display:inline-block;width:211px;overflow:hidden;text-over=
+flow:ellipsis;white-space:nowrap;vertical-align:middle;line-height:56px;tex=
+t-align:left">imagejpeg_0.jpeg</span></a></div><div><span class=3D"gmail_dr=
+ive_chip_status_text" style=3D"display:none;width:211px;overflow:hidden;tex=
+t-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left">=
+Added</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:no=
+ne;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;ve=
+rtical-align:top;text-align:left"></span></div></div><div aria-label=3D"Rem=
+ove attachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" st=
+yle=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></d=
+iv></div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895=
+5923573706311223F31-3C80-4EDA-9941-6FCEB7F02534" role=3D"group" class=3D"gm=
+ail_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-hei=
+ght:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;fon=
+t-weight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div styl=
+e=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:16=
+px 0px"><a href=3D"https://drive.google.com/file/d/1KZ9s1PrpXz0WtouGA8BtoYg=
+TsOr6w6oR" target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdp=
+arty.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;heigh=
+t:18px;width:18px;padding:3px"></a></div><div style=3D"display:inline-block=
+;vertical-align:middle"><div title=3D"imagejpeg_0.jpeg" style=3D"color:rgb(=
+11,87,208)"><a style=3D"text-decoration:none;color:inherit" href=3D"https:/=
+/drive.google.com/file/d/1KZ9s1PrpXz0WtouGA8BtoYgTsOr6w6oR" target=3D"_blan=
+k"><span style=3D"display:inline-block;width:211px;overflow:hidden;text-ove=
+rflow:ellipsis;white-space:nowrap;vertical-align:middle;line-height:56px;te=
+xt-align:left">imagejpeg_0.jpeg</span></a></div><div><span class=3D"gmail_d=
+rive_chip_status_text" style=3D"display:none;width:211px;overflow:hidden;te=
+xt-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left"=
+>Added</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:n=
+one;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;v=
+ertical-align:top;text-align:left"></span></div></div><div aria-label=3D"Re=
+move attachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" s=
+tyle=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></=
+div></div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-1979689=
+5592357370636EF62F8D-14A7-4512-86CC-D8FD4B90F814" role=3D"group" class=3D"g=
+mail_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-he=
+ight:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;fo=
+nt-weight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div sty=
+le=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:1=
+6px 0px"><a href=3D"https://drive.google.com/file/d/11dq91nQW5KAfCCjIRKP5VW=
+9bMzLRVSfW" target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-third=
+party.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;heig=
+ht:18px;width:18px;padding:3px"></a></div><div style=3D"display:inline-bloc=
+k;vertical-align:middle"><div title=3D"IMG_4704.jpeg" style=3D"color:rgb(11=
+,87,208)"><a style=3D"text-decoration:none;color:inherit" href=3D"https://d=
+rive.google.com/file/d/11dq91nQW5KAfCCjIRKP5VW9bMzLRVSfW" target=3D"_blank"=
+><span style=3D"display:inline-block;width:211px;overflow:hidden;text-overf=
+low:ellipsis;white-space:nowrap;vertical-align:middle;line-height:56px;text=
+-align:left">IMG_4704.jpeg</span></a></div><div><span class=3D"gmail_drive_=
+chip_status_text" style=3D"display:none;width:211px;overflow:hidden;text-ov=
+erflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left">Adde=
+d</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;w=
+idth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertic=
+al-align:top;text-align:left"></span></div></div><div aria-label=3D"Remove =
+attachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=
+=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div>=
+</div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592=
+357370631A2ED0F4-0932-40DF-A3FA-7CDB199F3305" role=3D"group" class=3D"gmail=
+_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-height=
+:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-w=
+eight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=
+=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:16p=
+x 0px"><a href=3D"https://drive.google.com/file/d/1tmiGhHKjToPInpvgXVmwAA_C=
+ptlWYCQn" target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdpa=
+rty.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;height=
+:18px;width:18px;padding:3px"></a></div><div style=3D"display:inline-block;=
+vertical-align:middle"><div title=3D"IMG_4760.jpeg" style=3D"color:rgb(11,8=
+7,208)"><a style=3D"text-decoration:none;color:inherit" href=3D"https://dri=
+ve.google.com/file/d/1tmiGhHKjToPInpvgXVmwAA_CptlWYCQn" target=3D"_blank"><=
+span style=3D"display:inline-block;width:211px;overflow:hidden;text-overflo=
+w:ellipsis;white-space:nowrap;vertical-align:middle;line-height:56px;text-a=
+lign:left">IMG_4760.jpeg</span></a></div><div><span class=3D"gmail_drive_ch=
+ip_status_text" style=3D"display:none;width:211px;overflow:hidden;text-over=
+flow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left">Added<=
+/span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;wid=
+th:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical=
+-align:top;text-align:left"></span></div></div><div aria-label=3D"Remove at=
+tachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D=
+"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div></d=
+iv></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592357=
+37063E1236385-1B7F-4BB7-B9AF-D8866C1AE019" role=3D"group" class=3D"gmail_in=
+bodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-height:56=
+px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-weig=
+ht:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=3D"d=
+isplay:inline-block;vertical-align:middle;margin:auto 10px;padding:16px 0px=
+"><a href=3D"https://drive.google.com/file/d/1xBJbQnt9iakE_YuhshMr7WeoFKMJO=
+pfd" target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdparty.g=
+oogleusercontent.com/32/type/image/jpeg" style=3D"display:block;height:18px=
+;width:18px;padding:3px"></a></div><div style=3D"display:inline-block;verti=
+cal-align:middle"><div title=3D"IMG_4761.jpeg" style=3D"color:rgb(11,87,208=
+)"><a style=3D"text-decoration:none;color:inherit" href=3D"https://drive.go=
+ogle.com/file/d/1xBJbQnt9iakE_YuhshMr7WeoFKMJOpfd" target=3D"_blank"><span =
+style=3D"display:inline-block;width:211px;overflow:hidden;text-overflow:ell=
+ipsis;white-space:nowrap;vertical-align:middle;line-height:56px;text-align:=
+left">IMG_4761.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_st=
+atus_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:=
+ellipsis;white-space:nowrap;vertical-align:top;text-align:left">Added</span=
+><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:21=
+1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-alig=
+n:top;text-align:left"></span></div></div><div aria-label=3D"Remove attachm=
+ent" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D"disp=
+lay:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div></div></=
+div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063=
+2AEFDB82-3A9E-440F-BC93-951237EC9228" role=3D"group" class=3D"gmail_inbodym=
+edia gmail_chip gmail_drive_chip" style=3D"display:block;min-height:56px;ma=
+x-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-weight:50=
+0;font-size:0.875em;background-color:rgb(221,227,234)"><div style=3D"displa=
+y:inline-block;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a =
+href=3D"https://drive.google.com/file/d/1MILEyTi6ZopPKj1O_EYyjn9l9qObmqP9" =
+target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdparty.google=
+usercontent.com/32/type/image/png" style=3D"display:block;height:18px;width=
+:18px;padding:3px"></a></div><div style=3D"display:inline-block;vertical-al=
+ign:middle"><div title=3D"IMG_4805.PNG" style=3D"color:rgb(11,87,208)"><a s=
+tyle=3D"text-decoration:none;color:inherit" href=3D"https://drive.google.co=
+m/file/d/1MILEyTi6ZopPKj1O_EYyjn9l9qObmqP9" target=3D"_blank"><span style=
+=3D"display:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis=
+;white-space:nowrap;vertical-align:middle;line-height:56px;text-align:left"=
+>IMG_4805.PNG</span></a></div><div><span class=3D"gmail_drive_chip_status_t=
+ext" style=3D"display:none;width:211px;overflow:hidden;text-overflow:ellips=
+is;white-space:nowrap;vertical-align:top;text-align:left">Added</span><span=
+ class=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;ov=
+erflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;=
+text-align:left"></span></div></div><div aria-label=3D"Remove attachment" r=
+ole=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:no=
+ne"><div class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></=
+div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592357370631C9B09=
+E4-CA74-4A7A-A8AE-C5BF7827539A" role=3D"group" class=3D"gmail_inbodymedia g=
+mail_chip gmail_drive_chip" style=3D"display:block;min-height:56px;max-heig=
+ht:500px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font=
+-size:0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inli=
+ne-block;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a href=
+=3D"https://drive.google.com/file/d/1vLbjwXaZYLX4v8j9qWumQXWGF_nu57U7" targ=
+et=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleuser=
+content.com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18=
+px;padding:3px"></a></div><div style=3D"display:inline-block;vertical-align=
+:middle"><div title=3D"IMG_4827.jpeg" style=3D"color:rgb(11,87,208)"><a sty=
+le=3D"text-decoration:none;color:inherit" href=3D"https://drive.google.com/=
+file/d/1vLbjwXaZYLX4v8j9qWumQXWGF_nu57U7" target=3D"_blank"><span style=3D"=
+display:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;whi=
+te-space:nowrap;vertical-align:middle;line-height:56px;text-align:left">IMG=
+_4827.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_status_text=
+" style=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;=
+white-space:nowrap;vertical-align:top;text-align:left">Added</span><span cl=
+ass=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;overf=
+low:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;tex=
+t-align:left"></span></div></div><div aria-label=3D"Remove attachment" role=
+=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:none"=
+><div class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div=
+><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592357370634AC541C2-=
+0E2B-4D6E-A8D3-3966ECC66771" role=3D"group" class=3D"gmail_inbodymedia gmai=
+l_chip gmail_drive_chip" style=3D"display:block;min-height:56px;max-height:=
+500px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-si=
+ze:0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inline-=
+block;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"h=
+ttps://drive.google.com/file/d/12MmFuja1x6Hi2tZyofbFgrPoacq6LlX-" target=3D=
+"_blank"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleuserconte=
+nt.com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;pa=
+dding:3px"></a></div><div style=3D"display:inline-block;vertical-align:midd=
+le"><div title=3D"IMG_3552.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D=
+"text-decoration:none;color:inherit" href=3D"https://drive.google.com/file/=
+d/12MmFuja1x6Hi2tZyofbFgrPoacq6LlX-" target=3D"_blank"><span style=3D"displ=
+ay:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-sp=
+ace:nowrap;vertical-align:middle;line-height:56px;text-align:left">IMG_3552=
+.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_status_text" sty=
+le=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white=
+-space:nowrap;vertical-align:top;text-align:left">Added</span><span class=
+=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;overflow=
+:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-a=
+lign:left"></span></div></div><div aria-label=3D"Remove attachment" role=3D=
+"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:none"><d=
+iv class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><d=
+iv dir=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063ED2EBAE0-4B4=
+E-48F7-87AA-21C673A6378C" role=3D"group" class=3D"gmail_inbodymedia gmail_c=
+hip gmail_drive_chip" style=3D"display:block;min-height:56px;max-height:500=
+px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:=
+0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inline-blo=
+ck;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"http=
+s://drive.google.com/file/d/1EEwW6FJICy9hHWXWCQ_qffUmAd3_flzp" target=3D"_b=
+lank"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.=
+com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;paddi=
+ng:3px"></a></div><div style=3D"display:inline-block;vertical-align:middle"=
+><div title=3D"IMG_3553.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"te=
+xt-decoration:none;color:inherit" href=3D"https://drive.google.com/file/d/1=
+EEwW6FJICy9hHWXWCQ_qffUmAd3_flzp" target=3D"_blank"><span style=3D"display:=
+inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-space=
+:nowrap;vertical-align:middle;line-height:56px;text-align:left">IMG_3553.jp=
+eg</span></a></div><div><span class=3D"gmail_drive_chip_status_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left">Added</span><span class=3D"=
+gmail_drive_chip_retry_text" style=3D"display:none;width:211px;overflow:hid=
+den;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align=
+:left"></span></div></div><div aria-label=3D"Remove attachment" role=3D"but=
+ton" class=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div c=
+lass=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><div d=
+ir=3D"ltr"><div><br></div><div id=3D"m_-19796895592357370635FCE93B8-5C2D-4C=
+CA-9338-CF41F78D6CE4" role=3D"group" class=3D"gmail_inbodymedia gmail_chip =
+gmail_drive_chip" style=3D"display:block;min-height:56px;max-height:500px;m=
+argin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:0.87=
+5em;background-color:rgb(221,227,234)"><div style=3D"display:inline-block;v=
+ertical-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"https://=
+drive.google.com/file/d/1zWaVkaJCSGO4Ul56_9A5KVw5wVhOoXnA" target=3D"_blank=
+"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/=
+32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;padding:3=
+px"></a></div><div style=3D"display:inline-block;vertical-align:middle"><di=
+v title=3D"71306658765__7FF5097E-94BA-4E27-B9D0-A54F10B016EA.jpeg" style=3D=
+"color:rgb(11,87,208)"><a style=3D"text-decoration:none;color:inherit" href=
+=3D"https://drive.google.com/file/d/1zWaVkaJCSGO4Ul56_9A5KVw5wVhOoXnA" targ=
+et=3D"_blank"><span style=3D"display:inline-block;width:211px;overflow:hidd=
+en;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-hei=
+ght:56px;text-align:left">71306658765__7FF5097E-94BA-4E27-B9D0-A54F10B016EA=
+.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_status_text" sty=
+le=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white=
+-space:nowrap;vertical-align:top;text-align:left">Added</span><span class=
+=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;overflow=
+:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-a=
+lign:left"></span></div></div><div aria-label=3D"Remove attachment" role=3D=
+"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:none"><d=
+iv class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><d=
+iv dir=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063EA8875AE-948=
+6-44F9-96A1-93D1EFD71CD0" role=3D"group" class=3D"gmail_inbodymedia gmail_c=
+hip gmail_drive_chip" style=3D"display:block;min-height:56px;max-height:500=
+px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:=
+0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inline-blo=
+ck;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"http=
+s://drive.google.com/file/d/10BjxK7vqGlYFjz6FdHTtP5Jdbpd5rdjm" target=3D"_b=
+lank"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.=
+com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;paddi=
+ng:3px"></a></div><div style=3D"display:inline-block;vertical-align:middle"=
+><div title=3D"IMG_1167.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"te=
+xt-decoration:none;color:inherit" href=3D"https://drive.google.com/file/d/1=
+0BjxK7vqGlYFjz6FdHTtP5Jdbpd5rdjm" target=3D"_blank"><span style=3D"display:=
+inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-space=
+:nowrap;vertical-align:middle;line-height:56px;text-align:left">IMG_1167.jp=
+eg</span></a></div><div><span class=3D"gmail_drive_chip_status_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left">Added</span><span class=3D"=
+gmail_drive_chip_retry_text" style=3D"display:none;width:211px;overflow:hid=
+den;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align=
+:left"></span></div></div><div aria-label=3D"Remove attachment" role=3D"but=
+ton" class=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div c=
+lass=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><div d=
+ir=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063C7385529-23AC-4B=
+07-BAB1-301B6D782A7F" role=3D"group" class=3D"gmail_inbodymedia gmail_chip =
+gmail_drive_chip" style=3D"display:block;min-height:56px;max-height:500px;m=
+argin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:0.87=
+5em;background-color:rgb(221,227,234)"><div style=3D"display:inline-block;v=
+ertical-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"https://=
+drive.google.com/file/d/1zmYwDUvSZ9O0rYx2-ZorsxBs0GGMmaMn" target=3D"_blank=
+"><img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/=
+32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;padding:3=
+px"></a></div><div style=3D"display:inline-block;vertical-align:middle"><di=
+v title=3D"IMG_1168.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"text-d=
+ecoration:none;color:inherit" href=3D"https://drive.google.com/file/d/1zmYw=
+DUvSZ9O0rYx2-ZorsxBs0GGMmaMn" target=3D"_blank"><span style=3D"display:inli=
+ne-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:now=
+rap;vertical-align:middle;line-height:56px;text-align:left">IMG_1168.jpeg</=
+span></a></div><div><span class=3D"gmail_drive_chip_status_text" style=3D"d=
+isplay:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:=
+nowrap;vertical-align:top;text-align:left">Added</span><span class=3D"gmail=
+_drive_chip_retry_text" style=3D"display:none;width:211px;overflow:hidden;t=
+ext-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left=
+"></span></div></div><div aria-label=3D"Remove attachment" role=3D"button" =
+class=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div class=
+=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><div dir=
+=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063FD1B3615-C565-4C0E=
+-97E7-874A73FA5A71" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gm=
+ail_drive_chip" style=3D"display:block;min-height:56px;max-height:500px;mar=
+gin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:0.875e=
+m;background-color:rgb(221,227,234)"><div style=3D"display:inline-block;ver=
+tical-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"https://dr=
+ive.google.com/file/d/1gwnBFV2ulTJa-PsfBssVc0tmhTWNCfV6" target=3D"_blank">=
+<img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/32=
+/type/image/jpeg" style=3D"display:block;height:18px;width:18px;padding:3px=
+"></a></div><div style=3D"display:inline-block;vertical-align:middle"><div =
+title=3D"IMG_5232.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"text-dec=
+oration:none;color:inherit" href=3D"https://drive.google.com/file/d/1gwnBFV=
+2ulTJa-PsfBssVc0tmhTWNCfV6" target=3D"_blank"><span style=3D"display:inline=
+-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowra=
+p;vertical-align:middle;line-height:56px;text-align:left">IMG_5232.jpeg</sp=
+an></a></div><div><span class=3D"gmail_drive_chip_status_text" style=3D"dis=
+play:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:no=
+wrap;vertical-align:top;text-align:left">Added</span><span class=3D"gmail_d=
+rive_chip_retry_text" style=3D"display:none;width:211px;overflow:hidden;tex=
+t-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left">=
+</span></div></div><div aria-label=3D"Remove attachment" role=3D"button" cl=
+ass=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div class=3D=
+"gmail_drive_chip_delete_button_icon"></div></div></div></div><div dir=3D"l=
+tr"><div><br></div><div id=3D"m_-19796895592357370636703F5EA-8C7B-42B4-BEF9=
+-945EDB476AFF" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_d=
+rive_chip" style=3D"display:block;min-height:56px;max-height:500px;margin:8=
+px 0px;width:303px;border-radius:16px;font-weight:500;font-size:0.875em;bac=
+kground-color:rgb(221,227,234)"><div style=3D"display:inline-block;vertical=
+-align:middle;margin:auto 10px;padding:16px 0px"><a href=3D"https://drive.g=
+oogle.com/file/d/163wB9YZktyskPXpkUECvz36WhCcL0W6o" target=3D"_blank"><img =
+alt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/32/type=
+/image/jpeg" style=3D"display:block;height:18px;width:18px;padding:3px"></a=
+></div><div style=3D"display:inline-block;vertical-align:middle"><div title=
+=3D"IMG_5560.jpeg" style=3D"color:rgb(11,87,208)"><a style=3D"text-decorati=
+on:none;color:inherit" href=3D"https://drive.google.com/file/d/163wB9YZktys=
+kPXpkUECvz36WhCcL0W6o" target=3D"_blank"><span style=3D"display:inline-bloc=
+k;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;ver=
+tical-align:middle;line-height:56px;text-align:left">IMG_5560.jpeg</span></=
+a></div><div><span class=3D"gmail_drive_chip_status_text" style=3D"display:=
+none;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;=
+vertical-align:top;text-align:left">Added</span><span class=3D"gmail_drive_=
+chip_retry_text" style=3D"display:none;width:211px;overflow:hidden;text-ove=
+rflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left"></spa=
+n></div></div><div aria-label=3D"Remove attachment" role=3D"button" class=
+=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div class=3D"gm=
+ail_drive_chip_delete_button_icon"></div></div></div></div><div dir=3D"ltr"=
+><div><br></div><div id=3D"m_-1979689559235737063657456CE-6055-4490-BC8E-50=
+F06820B7D2" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_driv=
+e_chip" style=3D"display:block;min-height:56px;max-height:500px;margin:8px =
+0px;width:303px;border-radius:16px;font-weight:500;font-size:0.875em;backgr=
+ound-color:rgb(221,227,234)"><div style=3D"display:inline-block;vertical-al=
+ign:middle;margin:auto 10px;padding:16px 0px"><a href=3D"https://drive.goog=
+le.com/file/d/1f6h6w4LrVlQSx7U1UZ302Ioramwyij_X" target=3D"_blank"><img alt=
+=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/32/type/im=
+age/jpeg" style=3D"display:block;height:18px;width:18px;padding:3px"></a></=
+div><div style=3D"display:inline-block;vertical-align:middle"><div title=3D=
+"IMG_5701.jpeg" style=3D"color:rgb(31,31,31)"><a style=3D"text-decoration:n=
+one;color:inherit" href=3D"https://drive.google.com/file/d/1f6h6w4LrVlQSx7U=
+1UZ302Ioramwyij_X" target=3D"_blank"><span style=3D"display:inline-block;wi=
+dth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertica=
+l-align:middle;line-height:56px;text-align:left">IMG_5701.jpeg</span></a></=
+div><div><span class=3D"gmail_drive_chip_status_text" style=3D"display:none=
+;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vert=
+ical-align:top;text-align:left">Couldn&#39;t add</span><span class=3D"gmail=
+_drive_chip_retry_text" style=3D"display:none;width:211px;overflow:hidden;t=
+ext-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left=
+">Couldn&#39;t add. Tap to retry.</span></div></div><div aria-label=3D"Remo=
+ve attachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" sty=
+le=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></di=
+v></div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-197968955=
+92357370632911FE3A-D3EE-4EC5-AF19-0D5C49935EB4" role=3D"group" class=3D"gma=
+il_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-heig=
+ht:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font=
+-weight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=
+=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:16p=
+x 0px"><a href=3D"https://drive.google.com/file/d/15a1ngoHAG23C2HhG3MtiErYT=
+APMn3zwy" target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdpa=
+rty.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;height=
+:18px;width:18px;padding:3px"></a></div><div style=3D"display:inline-block;=
+vertical-align:middle"><div title=3D"IMG_5702.jpeg" style=3D"color:rgb(11,8=
+7,208)"><a style=3D"text-decoration:none;color:inherit" href=3D"https://dri=
+ve.google.com/file/d/15a1ngoHAG23C2HhG3MtiErYTAPMn3zwy" target=3D"_blank"><=
+span style=3D"display:inline-block;width:211px;overflow:hidden;text-overflo=
+w:ellipsis;white-space:nowrap;vertical-align:middle;line-height:56px;text-a=
+lign:left">IMG_5702.jpeg</span></a></div><div><span class=3D"gmail_drive_ch=
+ip_status_text" style=3D"display:none;width:211px;overflow:hidden;text-over=
+flow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left">Added<=
+/span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;wid=
+th:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical=
+-align:top;text-align:left"></span></div></div><div aria-label=3D"Remove at=
+tachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D=
+"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div></d=
+iv></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592357=
+37063BF74C47B-B790-4F8C-9529-15C7A7CB5FDB" role=3D"group" class=3D"gmail_in=
+bodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-height:56=
+px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-weig=
+ht:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=3D"d=
+isplay:inline-block;vertical-align:middle;margin:auto 10px;padding:16px 0px=
+"><a href=3D"https://drive.google.com/file/d/14AkezDZpbWexxpsDQ4TvBSBlMeA_L=
+QWo" target=3D"_blank"><img alt=3D"Image" src=3D"https://drive-thirdparty.g=
+oogleusercontent.com/32/type/image/jpeg" style=3D"display:block;height:18px=
+;width:18px;padding:3px"></a></div><div style=3D"display:inline-block;verti=
+cal-align:middle"><div title=3D"IMG_5903.jpeg" style=3D"color:rgb(31,31,31)=
+"><a style=3D"text-decoration:none;color:inherit" href=3D"https://drive.goo=
+gle.com/file/d/14AkezDZpbWexxpsDQ4TvBSBlMeA_LQWo" target=3D"_blank"><span s=
+tyle=3D"display:inline-block;width:211px;overflow:hidden;text-overflow:elli=
+psis;white-space:nowrap;vertical-align:middle;line-height:56px;text-align:l=
+eft">IMG_5903.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_sta=
+tus_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:e=
+llipsis;white-space:nowrap;vertical-align:top;text-align:left">Adding=E2=80=
+=A6</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none=
+;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vert=
+ical-align:top;text-align:left"></span></div></div><div aria-label=3D"Remov=
+e attachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" styl=
+e=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div=
+></div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-1979689559=
+235737063966BE5E1-E4FD-4E83-87B2-6EDA6E75EA36" role=3D"group" class=3D"gmai=
+l_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-heigh=
+t:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-=
+weight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=
+=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:16p=
+x 0px"><a><img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercont=
+ent.com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;p=
+adding:3px"></a></div><div style=3D"display:inline-block;vertical-align:mid=
+dle"><div title=3D"IMG_8632.jpeg" style=3D"color:rgb(31,31,31)"><a style=3D=
+"text-decoration:none;color:inherit"><span style=3D"display:inline-block;wi=
+dth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertica=
+l-align:middle;line-height:56px;text-align:left">IMG_8632.jpeg</span></a></=
+div><div><span class=3D"gmail_drive_chip_status_text" style=3D"display:none=
+;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vert=
+ical-align:top;text-align:left">Adding=E2=80=A6</span><span class=3D"gmail_=
+drive_chip_retry_text" style=3D"display:none;width:211px;overflow:hidden;te=
+xt-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left"=
+></span></div></div><div aria-label=3D"Remove attachment" role=3D"button" c=
+lass=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div class=
+=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><div dir=
+=3D"ltr"><div><br></div><div id=3D"m_-19796895592357370636051E8BD-0681-4F8F=
+-8BA9-3A85672AB652" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gm=
+ail_drive_chip" style=3D"display:block;min-height:56px;max-height:500px;mar=
+gin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:0.875e=
+m;background-color:rgb(221,227,234)"><div style=3D"display:inline-block;ver=
+tical-align:middle;margin:auto 10px;padding:16px 0px"><a><img alt=3D"Image"=
+ src=3D"https://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" =
+style=3D"display:block;height:18px;width:18px;padding:3px"></a></div><div s=
+tyle=3D"display:inline-block;vertical-align:middle"><div title=3D"IMG_8633.=
+jpeg" style=3D"color:rgb(31,31,31)"><a style=3D"text-decoration:none;color:=
+inherit"><span style=3D"display:inline-block;width:211px;overflow:hidden;te=
+xt-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-height:5=
+6px;text-align:left">IMG_8633.jpeg</span></a></div><div><span class=3D"gmai=
+l_drive_chip_status_text" style=3D"display:none;width:211px;overflow:hidden=
+;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:le=
+ft">Adding=E2=80=A6</span><span class=3D"gmail_drive_chip_retry_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left"></span></div></div><div ari=
+a-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chip_del=
+ete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_delete_bu=
+tton_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><div id=
+=3D"m_-19796895592357370639FD02FDD-CE81-480B-8380-FB6E9CDDD4F6" role=3D"gro=
+up" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"displa=
+y:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;border-=
+radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(221,227,=
+234)"><div style=3D"display:inline-block;vertical-align:middle;margin:auto =
+10px;padding:16px 0px"><a><img alt=3D"Image" src=3D"https://drive-thirdpart=
+y.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;height:1=
+8px;width:18px;padding:3px"></a></div><div style=3D"display:inline-block;ve=
+rtical-align:middle"><div title=3D"IMG_8634.jpeg" style=3D"color:rgb(31,31,=
+31)"><a style=3D"text-decoration:none;color:inherit"><span style=3D"display=
+:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-spac=
+e:nowrap;vertical-align:middle;line-height:56px;text-align:left">IMG_8634.j=
+peg</span></a></div><div><span class=3D"gmail_drive_chip_status_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left">Adding=E2=80=A6</span><span=
+ class=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;ov=
+erflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;=
+text-align:left"></span></div></div><div aria-label=3D"Remove attachment" r=
+ole=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:no=
+ne"><div class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></=
+div><div dir=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063AD47F8=
+8A-2AF2-4843-BD53-8F3F6FC64073" role=3D"group" class=3D"gmail_inbodymedia g=
+mail_chip gmail_drive_chip" style=3D"display:block;min-height:56px;max-heig=
+ht:500px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font=
+-size:0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inli=
+ne-block;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a><img a=
+lt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/32/type/=
+image/jpeg" style=3D"display:block;height:18px;width:18px;padding:3px"></a>=
+</div><div style=3D"display:inline-block;vertical-align:middle"><div title=
+=3D"IMG_8638.jpeg" style=3D"color:rgb(31,31,31)"><a style=3D"text-decoratio=
+n:none;color:inherit"><span style=3D"display:inline-block;width:211px;overf=
+low:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;=
+line-height:56px;text-align:left">IMG_8638.jpeg</span></a></div><div><span =
+class=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;ov=
+erflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;=
+text-align:left">Adding=E2=80=A6</span><span class=3D"gmail_drive_chip_retr=
+y_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:ell=
+ipsis;white-space:nowrap;vertical-align:top;text-align:left"></span></div><=
+/div><div aria-label=3D"Remove attachment" role=3D"button" class=3D"gmail_d=
+rive_chip_delete_button" style=3D"display:none"><div class=3D"gmail_drive_c=
+hip_delete_button_icon"></div></div></div></div><div dir=3D"ltr"><div><br><=
+/div><div id=3D"m_-1979689559235737063281E0531-C7B9-4FD7-B8B2-9BE3A8E64323"=
+ role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" sty=
+le=3D"display:block;min-height:56px;max-height:500px;margin:8px 0px;width:3=
+03px;border-radius:16px;font-weight:500;font-size:0.875em;background-color:=
+rgb(221,227,234)"><div style=3D"display:inline-block;vertical-align:middle;=
+margin:auto 10px;padding:16px 0px"><a><img alt=3D"Image" src=3D"https://dri=
+ve-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"display:bl=
+ock;height:18px;width:18px;padding:3px"></a></div><div style=3D"display:inl=
+ine-block;vertical-align:middle"><div title=3D"IMG_5023.jpeg" style=3D"colo=
+r:rgb(31,31,31)"><a style=3D"text-decoration:none;color:inherit"><span styl=
+e=3D"display:inline-block;width:211px;overflow:hidden;text-overflow:ellipsi=
+s;white-space:nowrap;vertical-align:middle;line-height:56px;text-align:left=
+">IMG_5023.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_status=
+_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:elli=
+psis;white-space:nowrap;vertical-align:top;text-align:left">Adding=E2=80=A6=
+</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;wi=
+dth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertica=
+l-align:top;text-align:left"></span></div></div><div aria-label=3D"Remove a=
+ttachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=
+=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div>=
+</div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592=
+35737063660E2EC2-2C17-47CB-B875-929D94D74C0F" role=3D"group" class=3D"gmail=
+_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-height=
+:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-w=
+eight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=
+=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:16p=
+x 0px"><a><img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercont=
+ent.com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;p=
+adding:3px"></a></div><div style=3D"display:inline-block;vertical-align:mid=
+dle"><div title=3D"IMG_8222.jpeg" style=3D"color:rgb(31,31,31)"><a style=3D=
+"text-decoration:none;color:inherit"><span style=3D"display:inline-block;wi=
+dth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertica=
+l-align:middle;line-height:56px;text-align:left">IMG_8222.jpeg</span></a></=
+div><div><span class=3D"gmail_drive_chip_status_text" style=3D"display:none=
+;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vert=
+ical-align:top;text-align:left">Adding=E2=80=A6</span><span class=3D"gmail_=
+drive_chip_retry_text" style=3D"display:none;width:211px;overflow:hidden;te=
+xt-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left"=
+></span></div></div><div aria-label=3D"Remove attachment" role=3D"button" c=
+lass=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div class=
+=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><div dir=
+=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063ECDEFF1B-7A38-4C5C=
+-A2E2-564BC7144319" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gm=
+ail_drive_chip" style=3D"display:block;min-height:56px;max-height:500px;mar=
+gin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:0.875e=
+m;background-color:rgb(221,227,234)"><div style=3D"display:inline-block;ver=
+tical-align:middle;margin:auto 10px;padding:16px 0px"><a><img alt=3D"Image"=
+ src=3D"https://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" =
+style=3D"display:block;height:18px;width:18px;padding:3px"></a></div><div s=
+tyle=3D"display:inline-block;vertical-align:middle"><div title=3D"IMG_8223.=
+jpeg" style=3D"color:rgb(31,31,31)"><a style=3D"text-decoration:none;color:=
+inherit"><span style=3D"display:inline-block;width:211px;overflow:hidden;te=
+xt-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-height:5=
+6px;text-align:left">IMG_8223.jpeg</span></a></div><div><span class=3D"gmai=
+l_drive_chip_status_text" style=3D"display:none;width:211px;overflow:hidden=
+;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:le=
+ft">Adding=E2=80=A6</span><span class=3D"gmail_drive_chip_retry_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left"></span></div></div><div ari=
+a-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chip_del=
+ete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_delete_bu=
+tton_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><div id=
+=3D"m_-1979689559235737063D9FDA973-AF54-44EB-941F-EA7844E05AAC" role=3D"gro=
+up" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"displa=
+y:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;border-=
+radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(221,227,=
+234)"><div style=3D"display:inline-block;vertical-align:middle;margin:auto =
+10px;padding:16px 0px"><a><img alt=3D"Image" src=3D"https://drive-thirdpart=
+y.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;height:1=
+8px;width:18px;padding:3px"></a></div><div style=3D"display:inline-block;ve=
+rtical-align:middle"><div title=3D"IMG_8224.jpeg" style=3D"color:rgb(31,31,=
+31)"><a style=3D"text-decoration:none;color:inherit"><span style=3D"display=
+:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-spac=
+e:nowrap;vertical-align:middle;line-height:56px;text-align:left">IMG_8224.j=
+peg</span></a></div><div><span class=3D"gmail_drive_chip_status_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left">Adding=E2=80=A6</span><span=
+ class=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;ov=
+erflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;=
+text-align:left"></span></div></div><div aria-label=3D"Remove attachment" r=
+ole=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:no=
+ne"><div class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></=
+div><div dir=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063D03C86=
+18-AE7B-4723-947C-E787D46525EF" role=3D"group" class=3D"gmail_inbodymedia g=
+mail_chip gmail_drive_chip" style=3D"display:block;min-height:56px;max-heig=
+ht:500px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font=
+-size:0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inli=
+ne-block;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a><img a=
+lt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/32/type/=
+image/jpeg" style=3D"display:block;height:18px;width:18px;padding:3px"></a>=
+</div><div style=3D"display:inline-block;vertical-align:middle"><div title=
+=3D"IMG_8225.jpeg" style=3D"color:rgb(31,31,31)"><a style=3D"text-decoratio=
+n:none;color:inherit"><span style=3D"display:inline-block;width:211px;overf=
+low:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;=
+line-height:56px;text-align:left">IMG_8225.jpeg</span></a></div><div><span =
+class=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;ov=
+erflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;=
+text-align:left">Adding=E2=80=A6</span><span class=3D"gmail_drive_chip_retr=
+y_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:ell=
+ipsis;white-space:nowrap;vertical-align:top;text-align:left"></span></div><=
+/div><div aria-label=3D"Remove attachment" role=3D"button" class=3D"gmail_d=
+rive_chip_delete_button" style=3D"display:none"><div class=3D"gmail_drive_c=
+hip_delete_button_icon"></div></div></div></div><div dir=3D"ltr"><div><br><=
+/div><div id=3D"m_-1979689559235737063F297FA87-80C7-418E-AF5A-B758140980CF"=
+ role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" sty=
+le=3D"display:block;min-height:56px;max-height:500px;margin:8px 0px;width:3=
+03px;border-radius:16px;font-weight:500;font-size:0.875em;background-color:=
+rgb(221,227,234)"><div style=3D"display:inline-block;vertical-align:middle;=
+margin:auto 10px;padding:16px 0px"><a><img alt=3D"Image" src=3D"https://dri=
+ve-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"display:bl=
+ock;height:18px;width:18px;padding:3px"></a></div><div style=3D"display:inl=
+ine-block;vertical-align:middle"><div title=3D"IMG_8226.jpeg" style=3D"colo=
+r:rgb(31,31,31)"><a style=3D"text-decoration:none;color:inherit"><span styl=
+e=3D"display:inline-block;width:211px;overflow:hidden;text-overflow:ellipsi=
+s;white-space:nowrap;vertical-align:middle;line-height:56px;text-align:left=
+">IMG_8226.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_status=
+_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:elli=
+psis;white-space:nowrap;vertical-align:top;text-align:left">Adding=E2=80=A6=
+</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;wi=
+dth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertica=
+l-align:top;text-align:left"></span></div></div><div aria-label=3D"Remove a=
+ttachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=
+=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div>=
+</div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592=
+357370639EB9D982-58EC-444E-8C80-FBFD1A209302" role=3D"group" class=3D"gmail=
+_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-height=
+:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-w=
+eight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=
+=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:16p=
+x 0px"><a><img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercont=
+ent.com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;p=
+adding:3px"></a></div><div style=3D"display:inline-block;vertical-align:mid=
+dle"><div title=3D"IMG_8227.jpeg" style=3D"color:rgb(31,31,31)"><a style=3D=
+"text-decoration:none;color:inherit"><span style=3D"display:inline-block;wi=
+dth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertica=
+l-align:middle;line-height:56px;text-align:left">IMG_8227.jpeg</span></a></=
+div><div><span class=3D"gmail_drive_chip_status_text" style=3D"display:none=
+;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vert=
+ical-align:top;text-align:left">Adding=E2=80=A6</span><span class=3D"gmail_=
+drive_chip_retry_text" style=3D"display:none;width:211px;overflow:hidden;te=
+xt-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left"=
+></span></div></div><div aria-label=3D"Remove attachment" role=3D"button" c=
+lass=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div class=
+=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><div dir=
+=3D"ltr"><div><br></div><div id=3D"m_-19796895592357370636FB986E6-F102-441B=
+-BE1B-F3852FCAD453" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gm=
+ail_drive_chip" style=3D"display:block;min-height:56px;max-height:500px;mar=
+gin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:0.875e=
+m;background-color:rgb(221,227,234)"><div style=3D"display:inline-block;ver=
+tical-align:middle;margin:auto 10px;padding:16px 0px"><a><img alt=3D"Image"=
+ src=3D"https://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" =
+style=3D"display:block;height:18px;width:18px;padding:3px"></a></div><div s=
+tyle=3D"display:inline-block;vertical-align:middle"><div title=3D"IMG_8324.=
+jpeg" style=3D"color:rgb(31,31,31)"><a style=3D"text-decoration:none;color:=
+inherit"><span style=3D"display:inline-block;width:211px;overflow:hidden;te=
+xt-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-height:5=
+6px;text-align:left">IMG_8324.jpeg</span></a></div><div><span class=3D"gmai=
+l_drive_chip_status_text" style=3D"display:none;width:211px;overflow:hidden=
+;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:le=
+ft">Adding=E2=80=A6</span><span class=3D"gmail_drive_chip_retry_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left"></span></div></div><div ari=
+a-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chip_del=
+ete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_delete_bu=
+tton_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><div id=
+=3D"m_-197968955923573706379EA5B09-1CB0-4644-BB68-87B6EC3991F6" role=3D"gro=
+up" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"displa=
+y:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;border-=
+radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(221,227,=
+234)"><div style=3D"display:inline-block;vertical-align:middle;margin:auto =
+10px;padding:16px 0px"><a><img alt=3D"Image" src=3D"https://drive-thirdpart=
+y.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;height:1=
+8px;width:18px;padding:3px"></a></div><div style=3D"display:inline-block;ve=
+rtical-align:middle"><div title=3D"IMG_8517.jpeg" style=3D"color:rgb(31,31,=
+31)"><a style=3D"text-decoration:none;color:inherit"><span style=3D"display=
+:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-spac=
+e:nowrap;vertical-align:middle;line-height:56px;text-align:left">IMG_8517.j=
+peg</span></a></div><div><span class=3D"gmail_drive_chip_status_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left">Adding=E2=80=A6</span><span=
+ class=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;ov=
+erflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;=
+text-align:left"></span></div></div><div aria-label=3D"Remove attachment" r=
+ole=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:no=
+ne"><div class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></=
+div><div dir=3D"ltr"><div><br></div><div id=3D"m_-197968955923573706387B5C3=
+36-F7E0-4458-B5D3-D973C77F977C" role=3D"group" class=3D"gmail_inbodymedia g=
+mail_chip gmail_drive_chip" style=3D"display:block;min-height:56px;max-heig=
+ht:500px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font=
+-size:0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inli=
+ne-block;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a><img a=
+lt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/32/type/=
+image/jpeg" style=3D"display:block;height:18px;width:18px;padding:3px"></a>=
+</div><div style=3D"display:inline-block;vertical-align:middle"><div title=
+=3D"IMG_9290.jpeg" style=3D"color:rgb(31,31,31)"><a style=3D"text-decoratio=
+n:none;color:inherit"><span style=3D"display:inline-block;width:211px;overf=
+low:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;=
+line-height:56px;text-align:left">IMG_9290.jpeg</span></a></div><div><span =
+class=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;ov=
+erflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;=
+text-align:left">Adding=E2=80=A6</span><span class=3D"gmail_drive_chip_retr=
+y_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:ell=
+ipsis;white-space:nowrap;vertical-align:top;text-align:left"></span></div><=
+/div><div aria-label=3D"Remove attachment" role=3D"button" class=3D"gmail_d=
+rive_chip_delete_button" style=3D"display:none"><div class=3D"gmail_drive_c=
+hip_delete_button_icon"></div></div></div></div><div dir=3D"ltr"><div><br><=
+/div><div id=3D"m_-19796895592357370630C99970B-EAEB-4E4E-8FC4-0BD37FCFBB9C"=
+ role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" sty=
+le=3D"display:block;min-height:56px;max-height:500px;margin:8px 0px;width:3=
+03px;border-radius:16px;font-weight:500;font-size:0.875em;background-color:=
+rgb(221,227,234)"><div style=3D"display:inline-block;vertical-align:middle;=
+margin:auto 10px;padding:16px 0px"><a><img alt=3D"Image" src=3D"https://dri=
+ve-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"display:bl=
+ock;height:18px;width:18px;padding:3px"></a></div><div style=3D"display:inl=
+ine-block;vertical-align:middle"><div title=3D"IMG_9354.jpeg" style=3D"colo=
+r:rgb(31,31,31)"><a style=3D"text-decoration:none;color:inherit"><span styl=
+e=3D"display:inline-block;width:211px;overflow:hidden;text-overflow:ellipsi=
+s;white-space:nowrap;vertical-align:middle;line-height:56px;text-align:left=
+">IMG_9354.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_status=
+_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:elli=
+psis;white-space:nowrap;vertical-align:top;text-align:left">Adding=E2=80=A6=
+</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;wi=
+dth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertica=
+l-align:top;text-align:left"></span></div></div><div aria-label=3D"Remove a=
+ttachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=
+=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div>=
+</div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592=
+35737063FB6CFB0B-6104-4734-B65F-78A7881AE8EA" role=3D"group" class=3D"gmail=
+_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-height=
+:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-w=
+eight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=
+=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:16p=
+x 0px"><a><img alt=3D"Image" src=3D"https://drive-thirdparty.googleusercont=
+ent.com/32/type/image/jpeg" style=3D"display:block;height:18px;width:18px;p=
+adding:3px"></a></div><div style=3D"display:inline-block;vertical-align:mid=
+dle"><div title=3D"IMG_9355.jpeg" style=3D"color:rgb(31,31,31)"><a style=3D=
+"text-decoration:none;color:inherit"><span style=3D"display:inline-block;wi=
+dth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertica=
+l-align:middle;line-height:56px;text-align:left">IMG_9355.jpeg</span></a></=
+div><div><span class=3D"gmail_drive_chip_status_text" style=3D"display:none=
+;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vert=
+ical-align:top;text-align:left">Adding=E2=80=A6</span><span class=3D"gmail_=
+drive_chip_retry_text" style=3D"display:none;width:211px;overflow:hidden;te=
+xt-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:left"=
+></span></div></div><div aria-label=3D"Remove attachment" role=3D"button" c=
+lass=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div class=
+=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><div dir=
+=3D"ltr"><div><br></div><div id=3D"m_-19796895592357370634139FDEA-C6AA-4C50=
+-978E-885DAF4002F1" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gm=
+ail_drive_chip" style=3D"display:block;min-height:56px;max-height:500px;mar=
+gin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:0.875e=
+m;background-color:rgb(221,227,234)"><div style=3D"display:inline-block;ver=
+tical-align:middle;margin:auto 10px;padding:16px 0px"><a><img alt=3D"Image"=
+ src=3D"https://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" =
+style=3D"display:block;height:18px;width:18px;padding:3px"></a></div><div s=
+tyle=3D"display:inline-block;vertical-align:middle"><div title=3D"IMG_9356.=
+jpeg" style=3D"color:rgb(31,31,31)"><a style=3D"text-decoration:none;color:=
+inherit"><span style=3D"display:inline-block;width:211px;overflow:hidden;te=
+xt-overflow:ellipsis;white-space:nowrap;vertical-align:middle;line-height:5=
+6px;text-align:left">IMG_9356.jpeg</span></a></div><div><span class=3D"gmai=
+l_drive_chip_status_text" style=3D"display:none;width:211px;overflow:hidden=
+;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:le=
+ft">Adding=E2=80=A6</span><span class=3D"gmail_drive_chip_retry_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left"></span></div></div><div ari=
+a-label=3D"Remove attachment" role=3D"button" class=3D"gmail_drive_chip_del=
+ete_button" style=3D"display:none"><div class=3D"gmail_drive_chip_delete_bu=
+tton_icon"></div></div></div></div><div dir=3D"ltr"><div><br></div><div id=
+=3D"m_-1979689559235737063C5A043DC-0A14-43B4-83C8-144CD2EC3E7D" role=3D"gro=
+up" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" style=3D"displa=
+y:block;min-height:56px;max-height:500px;margin:8px 0px;width:303px;border-=
+radius:16px;font-weight:500;font-size:0.875em;background-color:rgb(221,227,=
+234)"><div style=3D"display:inline-block;vertical-align:middle;margin:auto =
+10px;padding:16px 0px"><a><img alt=3D"Image" src=3D"https://drive-thirdpart=
+y.googleusercontent.com/32/type/image/jpeg" style=3D"display:block;height:1=
+8px;width:18px;padding:3px"></a></div><div style=3D"display:inline-block;ve=
+rtical-align:middle"><div title=3D"IMG_9357.jpeg" style=3D"color:rgb(31,31,=
+31)"><a style=3D"text-decoration:none;color:inherit"><span style=3D"display=
+:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-spac=
+e:nowrap;vertical-align:middle;line-height:56px;text-align:left">IMG_9357.j=
+peg</span></a></div><div><span class=3D"gmail_drive_chip_status_text" style=
+=3D"display:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;vertical-align:top;text-align:left">Adding=E2=80=A6</span><span=
+ class=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;ov=
+erflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;=
+text-align:left"></span></div></div><div aria-label=3D"Remove attachment" r=
+ole=3D"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:no=
+ne"><div class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></=
+div><div dir=3D"ltr"><div><br></div><div id=3D"m_-1979689559235737063A37BBE=
+7B-E3A0-408A-8ACE-1C2EAD472426" role=3D"group" class=3D"gmail_inbodymedia g=
+mail_chip gmail_drive_chip" style=3D"display:block;min-height:56px;max-heig=
+ht:500px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font=
+-size:0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inli=
+ne-block;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a><img a=
+lt=3D"Image" src=3D"https://drive-thirdparty.googleusercontent.com/32/type/=
+image/jpeg" style=3D"display:block;height:18px;width:18px;padding:3px"></a>=
+</div><div style=3D"display:inline-block;vertical-align:middle"><div title=
+=3D"IMG_9358.jpeg" style=3D"color:rgb(31,31,31)"><a style=3D"text-decoratio=
+n:none;color:inherit"><span style=3D"display:inline-block;width:211px;overf=
+low:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;=
+line-height:56px;text-align:left">IMG_9358.jpeg</span></a></div><div><span =
+class=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;ov=
+erflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;=
+text-align:left">Adding=E2=80=A6</span><span class=3D"gmail_drive_chip_retr=
+y_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:ell=
+ipsis;white-space:nowrap;vertical-align:top;text-align:left"></span></div><=
+/div><div aria-label=3D"Remove attachment" role=3D"button" class=3D"gmail_d=
+rive_chip_delete_button" style=3D"display:none"><div class=3D"gmail_drive_c=
+hip_delete_button_icon"></div></div></div></div><div dir=3D"ltr"><div><br><=
+/div><div id=3D"m_-197968955923573706326C57965-41DB-4ABC-B9DA-4A1F87BFE567"=
+ role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" sty=
+le=3D"display:block;min-height:56px;max-height:500px;margin:8px 0px;width:3=
+03px;border-radius:16px;font-weight:500;font-size:0.875em;background-color:=
+rgb(221,227,234)"><div style=3D"display:inline-block;vertical-align:middle;=
+margin:auto 10px;padding:16px 0px"><a><img alt=3D"Image" src=3D"https://dri=
+ve-thirdparty.googleusercontent.com/32/type/image/jpeg" style=3D"display:bl=
+ock;height:18px;width:18px;padding:3px"></a></div><div style=3D"display:inl=
+ine-block;vertical-align:middle"><div title=3D"IMG_9359.jpeg" style=3D"colo=
+r:rgb(31,31,31)"><a style=3D"text-decoration:none;color:inherit"><span styl=
+e=3D"display:inline-block;width:211px;overflow:hidden;text-overflow:ellipsi=
+s;white-space:nowrap;vertical-align:middle;line-height:56px;text-align:left=
+">IMG_9359.jpeg</span></a></div><div><span class=3D"gmail_drive_chip_status=
+_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:elli=
+psis;white-space:nowrap;vertical-align:top;text-align:left">Adding=E2=80=A6=
+</span><span class=3D"gmail_drive_chip_retry_text" style=3D"display:none;wi=
+dth:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertica=
+l-align:top;text-align:left"></span></div></div><div aria-label=3D"Remove a=
+ttachment" role=3D"button" class=3D"gmail_drive_chip_delete_button" style=
+=3D"display:none"><div class=3D"gmail_drive_chip_delete_button_icon"></div>=
+</div></div></div><div dir=3D"ltr"><div><br></div><div id=3D"m_-19796895592=
+357370635CA270FD-9797-4DDF-96B4-E17E56B94454" role=3D"group" class=3D"gmail=
+_inbodymedia gmail_chip gmail_drive_chip" style=3D"display:block;min-height=
+:56px;max-height:500px;margin:8px 0px;width:303px;border-radius:16px;font-w=
+eight:500;font-size:0.875em;background-color:rgb(221,227,234)"><div style=
+=3D"display:inline-block;vertical-align:middle;margin:auto 10px;padding:16p=
+x 0px"><a><img alt=3D"Video File" src=3D"https://drive-thirdparty.googleuse=
+rcontent.com/32/type/video/quicktime" style=3D"display:block;height:18px;wi=
+dth:18px;padding:3px"></a></div><div style=3D"display:inline-block;vertical=
+-align:middle"><div title=3D"IMG_0573.mov" style=3D"color:rgb(31,31,31)"><a=
+ style=3D"text-decoration:none;color:inherit"><span style=3D"display:inline=
+-block;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowra=
+p;vertical-align:middle;line-height:56px;text-align:left">IMG_0573.mov</spa=
+n></a></div><div><span class=3D"gmail_drive_chip_status_text" style=3D"disp=
+lay:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:now=
+rap;vertical-align:top;text-align:left">Adding=E2=80=A6</span><span class=
+=3D"gmail_drive_chip_retry_text" style=3D"display:none;width:211px;overflow=
+:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-a=
+lign:left"></span></div></div><div aria-label=3D"Remove attachment" role=3D=
+"button" class=3D"gmail_drive_chip_delete_button" style=3D"display:none"><d=
+iv class=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><d=
+iv dir=3D"ltr"><div><br></div><div id=3D"m_-197968955923573706312CACAE7-920=
+E-4B48-A027-754C11DC8AFF" role=3D"group" class=3D"gmail_inbodymedia gmail_c=
+hip gmail_drive_chip" style=3D"display:block;min-height:56px;max-height:500=
+px;margin:8px 0px;width:303px;border-radius:16px;font-weight:500;font-size:=
+0.875em;background-color:rgb(221,227,234)"><div style=3D"display:inline-blo=
+ck;vertical-align:middle;margin:auto 10px;padding:16px 0px"><a><img alt=3D"=
+Video File" src=3D"https://drive-thirdparty.googleusercontent.com/32/type/v=
+ideo/quicktime" style=3D"display:block;height:18px;width:18px;padding:3px">=
+</a></div><div style=3D"display:inline-block;vertical-align:middle"><div ti=
+tle=3D"IMG_1398.MOV" style=3D"color:rgb(31,31,31)"><a style=3D"text-decorat=
+ion:none;color:inherit"><span style=3D"display:inline-block;width:211px;ove=
+rflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middl=
+e;line-height:56px;text-align:left">IMG_1398.MOV</span></a></div><div><span=
+ class=3D"gmail_drive_chip_status_text" style=3D"display:none;width:211px;o=
+verflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top=
+;text-align:left">Adding=E2=80=A6</span><span class=3D"gmail_drive_chip_ret=
+ry_text" style=3D"display:none;width:211px;overflow:hidden;text-overflow:el=
+lipsis;white-space:nowrap;vertical-align:top;text-align:left"></span></div>=
+</div><div aria-label=3D"Remove attachment" role=3D"button" class=3D"gmail_=
+drive_chip_delete_button" style=3D"display:none"><div class=3D"gmail_drive_=
+chip_delete_button_icon"></div></div></div></div><div dir=3D"ltr"><div><br>=
+</div><div id=3D"m_-19796895592357370639AF8EB37-C5C7-4ABA-935B-342507CF3404=
+" role=3D"group" class=3D"gmail_inbodymedia gmail_chip gmail_drive_chip" st=
+yle=3D"display:block;min-height:56px;max-height:500px;margin:8px 0px;width:=
+303px;border-radius:16px;font-weight:500;font-size:0.875em;background-color=
+:rgb(221,227,234)"><div style=3D"display:inline-block;vertical-align:middle=
+;margin:auto 10px;padding:16px 0px"><a><img alt=3D"Video File" src=3D"https=
+://drive-thirdparty.googleusercontent.com/32/type/video/quicktime" style=3D=
+"display:block;height:18px;width:18px;padding:3px"></a></div><div style=3D"=
+display:inline-block;vertical-align:middle"><div title=3D"cm-chat-media-vid=
+eo-1:be8f13f5-c2aa-529b-9d87-3c3082efdaf1:3106:0:0.MOV" style=3D"color:rgb(=
+31,31,31)"><a style=3D"text-decoration:none;color:inherit"><span style=3D"d=
+isplay:inline-block;width:211px;overflow:hidden;text-overflow:ellipsis;whit=
+e-space:nowrap;vertical-align:middle;line-height:56px;text-align:left">cm-c=
+hat-media-video-1:be8f13f5-c2aa-529b-9d87-3c3082efdaf1:3106:0:0.MOV</span><=
+/a></div><div><span class=3D"gmail_drive_chip_status_text" style=3D"display=
+:none;width:211px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap=
+;vertical-align:top;text-align:left">Adding=E2=80=A6</span><span class=3D"g=
+mail_drive_chip_retry_text" style=3D"display:none;width:211px;overflow:hidd=
+en;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;text-align:=
+left"></span></div></div><div aria-label=3D"Remove attachment" role=3D"butt=
+on" class=3D"gmail_drive_chip_delete_button" style=3D"display:none"><div cl=
+ass=3D"gmail_drive_chip_delete_button_icon"></div></div></div></div><div><b=
+r></div></div>
+</div>
+
+--00000000000094f68406525cdf89--
