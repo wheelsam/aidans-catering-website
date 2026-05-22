@@ -8,6 +8,7 @@ export default function Home() {
   const servicesReveal = useScrollReveal();
   const aboutTextReveal = useScrollReveal();
   const aboutImageReveal = useScrollReveal();
+  const portfolioReveal = useScrollReveal();
 
   return (
     <main>
@@ -205,7 +206,7 @@ export default function Home() {
           <p className="text-center text-lg text-charcoal/70 mb-16 max-w-2xl mx-auto">
             A showcase of recent work, from elegant wedding boards to stunning grazing tables
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div ref={portfolioReveal.elementRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
               "IMG_1326.jpeg",
               "IMG_1328.jpeg",
@@ -240,7 +241,7 @@ export default function Home() {
               "IMG_8639.jpeg",
               "IMG_8641.jpeg",
             ].map((img, i) => (
-              <div key={i} className="relative aspect-square rounded-lg overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-shadow">
+              <div key={i} className={`relative aspect-square rounded-lg overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-shadow fade-scale ${portfolioReveal.isVisible ? 'revealed' : ''}`}>
                 <Image
                   src={`/images/${img}`}
                   alt={`Portfolio image ${i + 1}`}
