@@ -10,18 +10,43 @@ interface CarouselProps {
 
 export default function Carousel({ images, alt }: CarouselProps) {
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(0);
 
-  const next = () => setCurrent((current + 1) % images.length);
-  const prev = () => setCurrent((current - 1 + images.length) % images.length);
+  const next = () => {
+    setDirection(1);
+    setCurrent((current + 1) % images.length);
+  };
+
+  const prev = () => {
+    setDirection(-1);
+    setCurrent((current - 1 + images.length) % images.length);
+  };
 
   return (
-    <div className="relative aspect-[4/3] rounded-lg overflow-hidden group">
-      <Image
-        src={images[current]}
-        alt={`${alt} ${current + 1}`}
-        fill
-        className="object-cover"
-      />
+    <div className="relative aspect-[4/3] rounded-lg overflow-hidden group bg-charcoal/5">
+      <div className="relative w-full h-full">
+        {images.map((img, i) => (
+          <div
+            key={i}
+            className={`absolute inset-0 transition-all duration-500 ease-in-out ${
+              i === current
+                ? "opacity-100 translate-x-0"
+                : i < current
+                ? "opacity-0 -translate-x-full"
+                : "opacity-0 translate-x-full"
+            }`}
+          >
+            <Image
+              src={img}
+              alt={`${alt} ${i + 1}`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={85}
+            />
+          </div>
+        ))}
+      </div>
 
       {images.length > 1 && (
         <>

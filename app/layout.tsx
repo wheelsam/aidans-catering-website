@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     description: "Handcrafted charcuterie boards and grazing tables for Seattle weddings and special events",
     type: "website",
   },
+  icons: {
+    icon: '/icon.svg',
+  },
 };
 
 export default function RootLayout({

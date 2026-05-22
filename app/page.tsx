@@ -34,6 +34,8 @@ export default function Home() {
             fill
             className="object-cover brightness-[0.35]"
             priority
+            quality={90}
+            sizes="100vw"
           />
         </div>
         <div className="relative z-10 text-center text-white max-w-4xl px-6">
@@ -181,6 +183,8 @@ export default function Home() {
                 alt="Fine dining plated dish by Chef Aidan Collins"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={85}
               />
             </div>
           </div>
@@ -235,6 +239,8 @@ export default function Home() {
                   alt={`Portfolio image ${i + 1}`}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  quality={80}
                 />
               </div>
             ))}
