@@ -1,7 +1,12 @@
+'use client';
+
 import Image from "next/image";
 import Carousel from "@/components/Carousel";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function Home() {
+  const servicesReveal = useScrollReveal();
+
   return (
     <main>
       {/* Navigation */}
@@ -61,8 +66,8 @@ export default function Home() {
           <p className="text-center text-lg text-charcoal/70 mb-16 max-w-2xl mx-auto">
             From intimate gatherings to grand celebrations, each experience is thoughtfully crafted with premium ingredients and artistic presentation.
           </p>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-4">
+          <div ref={servicesReveal.elementRef} className="grid md:grid-cols-2 gap-12">
+            <div className={`space-y-4 fade-up ${servicesReveal.isVisible ? 'revealed' : ''}`}>
               <Carousel
                 images={[
                   "/images/IMG_8324.jpeg",
@@ -80,7 +85,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className={`space-y-4 fade-up ${servicesReveal.isVisible ? 'revealed' : ''}`}>
               <Carousel
                 images={[
                   "/images/IMG_3589.jpeg",
@@ -96,7 +101,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className={`space-y-4 fade-up ${servicesReveal.isVisible ? 'revealed' : ''}`}>
               <Carousel
                 images={[
                   "/images/IMG_1772.jpeg",
@@ -114,7 +119,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className={`space-y-4 fade-up ${servicesReveal.isVisible ? 'revealed' : ''}`}>
               <Carousel
                 images={[
                   "/images/IMG_8517.jpeg",
