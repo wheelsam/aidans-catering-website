@@ -15,16 +15,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Aidan Collins | Luxury Wedding Charcuterie & Catering | Seattle",
-  description: "Elevate your Seattle wedding or special event with handcrafted charcuterie boards, grazing tables, and luxury catering. 6 years fine dining experience. Serving up to 200 guests. Custom menus for weddings, corporate events, and private dinners.",
+  title: "Collins Charcuterie | Luxury Wedding Catering | Seattle",
+  description: "Elevate your Seattle wedding or special event with handcrafted charcuterie boards and grazing tables by Collins Charcuterie. 6 years fine dining experience. Serving up to 200 guests. Custom menus for weddings, corporate events, and private dinners.",
   keywords: "wedding catering Seattle, charcuterie boards Seattle, grazing tables, luxury catering, wedding food, Seattle caterer, fine dining catering, cocktail reception, private events",
   openGraph: {
-    title: "Aidan Collins | Luxury Wedding Charcuterie",
-    description: "Handcrafted charcuterie boards and grazing tables for Seattle weddings and special events",
+    title: "Collins Charcuterie | Luxury Wedding Catering",
+    description: "Handcrafted charcuterie boards and grazing tables for Seattle weddings and special events by Collins Charcuterie",
     type: "website",
   },
   icons: {
-    icon: '/icon.svg',
+    icon: '/images/logo.jpeg',
   },
 };
 

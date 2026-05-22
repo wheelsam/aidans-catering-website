@@ -17,7 +17,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-sage/20 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="font-serif text-2xl text-charcoal">Aidan Collins</h1>
+            <h1 className="font-serif text-2xl text-charcoal">Collins Charcuterie</h1>
             <div className="hidden md:flex gap-8 text-charcoal">
               <a href="#services" className="hover:text-darkgreen transition-colors font-medium">Services</a>
               <a href="#about" className="hover:text-darkgreen transition-colors font-medium">About</a>
@@ -49,8 +49,11 @@ export default function Home() {
         </div>
         <div className="relative z-10 text-center text-white max-w-4xl px-6">
           <h2 className="font-serif text-5xl md:text-7xl mb-6 text-balance leading-tight">
-            Elevate Your Celebration with Handcrafted Charcuterie
+            Collins Charcuterie
           </h2>
+          <p className="font-serif text-3xl md:text-4xl mb-8 text-balance opacity-90">
+            Elevate Your Celebration with Handcrafted Charcuterie
+          </p>
           <p className="text-xl md:text-2xl mb-8 text-balance opacity-95 font-light">
             Luxury grazing tables and artisan boards for weddings and special events in Seattle
           </p>
@@ -313,8 +316,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-charcoal text-white py-12 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h3 className="font-serif text-3xl mb-3">Aidan Collins</h3>
-          <p className="text-white/70 mb-6 text-lg">Luxury Wedding Charcuterie & Catering</p>
+          <h3 className="font-serif text-3xl mb-3">Collins Charcuterie</h3>
+          <p className="text-white/70 mb-6 text-lg">by Chef Aidan Collins</p>
           <div className="flex justify-center gap-8 mb-8 flex-wrap">
             <a href="#services" className="hover:text-gold transition-colors">Services</a>
             <a href="#about" className="hover:text-gold transition-colors">About</a>
