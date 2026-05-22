@@ -6,6 +6,8 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function Home() {
   const servicesReveal = useScrollReveal();
+  const aboutTextReveal = useScrollReveal();
+  const aboutImageReveal = useScrollReveal();
 
   return (
     <main>
@@ -152,7 +154,7 @@ export default function Home() {
       <section id="about" className="py-24 px-6 bg-cream">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
+            <div ref={aboutTextReveal.elementRef} className={`space-y-6 fade-left ${aboutTextReveal.isVisible ? 'revealed' : ''}`}>
               <h2 className="font-serif text-5xl md:text-6xl text-charcoal">Meet Aidan</h2>
               <p className="text-lg text-charcoal/80 leading-relaxed">
                 Hello! I'm Aidan Collins, a Seattle-based chef passionate about creating beautiful, delicious experiences for your most important moments.
@@ -182,7 +184,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+            <div ref={aboutImageReveal.elementRef} className={`relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl fade-right ${aboutImageReveal.isVisible ? 'revealed' : ''}`}>
               <Image
                 src="/images/IMG_3519.jpeg"
                 alt="Fine dining plated dish by Chef Aidan Collins"
